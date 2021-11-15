@@ -1,0 +1,367 @@
+/*Hoja de estilos*/
+@import url(./colors.css);
+.bio {
+  font-weight: bold;
+  font-size: 21px;
+}
+.black {
+  grid-column: 1 / span 3;
+  grid-row: 4;
+  background-color: var(--main-negro);
+  margin-top: 2%;
+}
+
+.box1 {
+  background-image: url(../images/equipo/equipo2/Guille.jpg);
+  width: 330px;
+  height: 530px;
+  text-align: center;
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+.box1 .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box1:hover .enl {
+  text-decoration: none;
+  color: var(--main-blanco);
+  transition: 0.8s;
+}
+.box1:visited .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box1:hover {
+  transition: 0.8s;
+  background-image: url(../images/equipo/equipo2/Guille1.png);
+  color: var(--main-blanco);
+}
+
+.box1:hover .icons {
+  visibility: visible;
+  transition: 0.8s;
+}
+/*-----------------------------------------------------------------------------------------------------------*/
+.box2 {
+  background-image: url(../images/equipo/equipo2/Dani.jpg);
+  width: 330px;
+  height: 530px;
+  text-align: center;
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+  color: transparent;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-right: 2%;
+}
+.box2:hover {
+  transition: 0.8s;
+  background-image: url(../images/equipo/equipo2/Dani1.png);
+  color: var(--main-blanco);
+}
+
+.box2:hover .icons {
+  visibility: visible;
+  transition: 0.8s;
+}
+.box2 .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box2:hover .enl {
+  text-decoration: none;
+  color: var(--main-blanco);
+  transition: 0.8s;
+}
+.box2:visited .enl {
+  text-decoration: none;
+  color: transparent;
+}
+
+/*-----------------------------------------------------------*/
+.box3 {
+  background-image: url(../images/equipo/equipo2/Fran.jpg);
+  width: 330px;
+  height: 530px;
+  text-align: center;
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+  color: transparent;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-right: 2%;
+}
+.box3:hover {
+  transition: 0.8s;
+  background-image: url(../images/equipo/equipo2/Fran1.png);
+  color: var(--main-blanco);
+}
+
+.box3:hover .icons {
+  visibility: visible;
+  transition: 0.8s;
+}
+.box3 .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box3:hover .enl {
+  text-decoration: none;
+  color: var(--main-blanco);
+  transition: 0.8s;
+}
+.box3:visited .enl {
+  text-decoration: none;
+  color: transparent;
+}
+
+/*-----------------------------------------------------------*/
+.box4 {
+  background-image: url(../images/equipo/equipo2/Noe.jpg);
+  width: 330px;
+  height: 530px;
+  text-align: center;
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+  color: transparent;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-right: 2%;
+}
+.box4:hover {
+  transition: 0.8s;
+  background-image: url(../images/equipo/equipo2/Noe1.png);
+  color: var(--main-blanco);
+}
+
+.box4:hover .icons {
+  visibility: visible;
+  transition: 0.8s;
+}
+.box4 .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box4:hover .enl {
+  text-decoration: none;
+  color: var(--main-blanco);
+  transition: 0.8s;
+}
+.box4:visited .enl {
+  text-decoration: none;
+  color: transparent;
+}
+
+/*-----------------------------------------------------------*/
+
+.box5 {
+  background-image: url(../images/equipo/equipo2/Antonio.jpg);
+  width: 330px;
+  height: 530px;
+  text-align: center;
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+  color: transparent;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-right: 2%;
+}
+.box5:hover {
+  transition: 0.8s;
+  background-image: url(../images/equipo/equipo2/Antonio1.png);
+  color: var(--main-blanco);
+}
+
+.box5:hover .icons {
+  visibility: visible;
+  transition: 0.8s;
+}
+.box5 .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box5:hover .enl {
+  text-decoration: none;
+  color: var(--main-blanco);
+  transition: 0.8s;
+}
+.box5:visited .enl {
+  text-decoration: none;
+  color: transparent;
+}
+
+.cabec1 {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  border: black 1px solid;
+  padding: 2px;
+}
+.caja1 {
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  margin: 40px auto 20px auto;
+}
+.caja2 {
+  width: auto;
+}
+.celda {
+  width: 15%;
+  border: black 1px solid;
+  padding: 2%;
+  background-color: var(--main-negro);
+  color: var(--main-gris);
+}
+.celda1 {
+  background-color: var(--main-negro);
+  color: var(--main-blanco);
+  width: 15%;
+  border: black 1px solid;
+  padding: 2%;
+}
+.celda2 {
+  background-color: var(--main-oscuro);
+  color: var(--main-blanco);
+  width: 15%;
+  border: var(--main-rojo) 1px solid;
+  padding: 2%;
+}
+
+.celda3 {
+  border: var(--main-rojo) 1px solid;
+  padding: 2%;
+}
+.cuer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  margin: 0%;
+}
+.cuer1 {
+  align-self: center;
+}
+
+.enlace1 {
+  text-decoration: none;
+  color: var(--main-blanco);
+}
+
+.enlace {
+  text-decoration: none;
+  color: var(--main-blanco);
+}
+
+.fab {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.flex1 {
+  display: flex;
+  margin: 0% auto;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.gridm1 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.gridmedio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 80%;
+  gap: 20px;
+  margin: 0 auto;
+}
+
+.icons {
+  visibility: hidden;
+  color: var(--main-rojo);
+  text-decoration: none;
+  margin-top: 71%;
+  padding: 3%;
+  background-color: var(--main-rojo);
+  color: var(--main-blanco);
+}
+.icons1 {
+  text-decoration: none;
+}
+
+.foot {
+  grid-column: 1 / span 3;
+  grid-row: 5;
+  border: black 1px solid;
+  padding: 2px;
+}
+
+.name {
+  color: var(--main-blanco);
+}
+
+.names {
+  padding-top: 40%;
+}
+
+.nombre {
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+  width: 330px;
+  height: 530px;
+}
+
+.tabla1 {
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: auto;
+  height: auto;
+  margin: 20px 0 0 20px;
+}
+
+/*--------------------------------------------------------------*/
+
+.tit2 {
+  color: var(--main-rojo);
+  text-align: center;
+  font-size: 50px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .gridm1 {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .gridmedio {
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .gridm1 {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .gridmedio {
+    width: 320px;
+  }
+
+  .image {
+    width: 300px;
+  }
+  .cuer1 {
+    width: 320px;
+  }
+  .tabla1 {
+    max-width: 500px;
+    margin: 20px 0 0 0;
+  }
+}

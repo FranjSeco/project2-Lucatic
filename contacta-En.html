@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles/contacta.css" />
+
+    <link rel="stylesheet" href="styles/headerFooter.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid navbar">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="fas fa-hamburger"></i>
+              </button>
+              <img id="logoNav" src="images/logoNav.png" alt="" />
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li><a class="nav-link" href="index-EN.html">Home</a></li>
+                  <li><a class="nav-link" href="equipo1-EN.html">Team</a></li>
+                  <li>
+                    <a class="nav-link" href="partidos-EN.html">Matches</a>
+                  </li>
+                  <li><a class="nav-link" href="noticias-EN.html">News</a></li>
+                  <li>
+                    <a
+                      class="nav-link"
+                      href="contacta-EN.html"
+                      id="ultimaOpcion"
+                      >Contact</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Language
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li>
+                        <a class="dropdown-item" href="contacta-En.html"
+                          >English</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="contacta.html"
+                          >Spanish</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="container form">
+      <h1>Contact Team Luca-Tic</h1>
+      <br />
+      <div class="row" id="fullForm">
+        <div class="col-lg-7">
+          <div class="container formulario">
+            <form class="row justify-content-evenly pt-4">
+              <div class="col-sm-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                  />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Last name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputEmail2"
+                  />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail3"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Choose a topic</label>
+                <select class="form-select">
+                  <option value="consulta">General inquiry</option>
+                  <option value="prensa">Press/Media</option>
+                  <option value="error">System bugs</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Comments</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+              </div>
+
+              <h5>Data Processing Consent</h5>
+              <div class="mb-3">
+                <ul>
+                  <li>
+                    <div class="check">
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="exampleCheck1"
+                      />
+                      <label class="form-check-label" for="exampleCheck1"
+                        >By using this form you agree with the storage and
+                        handling of your data by this website according to our
+                        Privacy policy</label
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-3 text-right" id="links">
+          <div class="links">
+            <div class="container" id="linkContainer">
+              <div class="row">
+                <i class="fab fa-twitter"></i>
+              </div>
+              <div class="row">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div class="row">
+                <i class="fab fa-twitch"></i>
+              </div>
+              <div class="row">
+                <i class="fab fa-facebook"></i>
+              </div>
+              <div class="row">
+                <i class="fab fa-youtube"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <iframe
+      id="mapa"
+      width="100%"
+      height="600"
+      frameborder="0"
+      scrolling="no"
+      marginheight="0"
+      marginwidth="0"
+      src="https://maps.google.com/maps?width=100%25&height=600&hl=es&q=Les%20Rambles,%201%20Barcelona,%20Spain+(Mi%20nombre%20de%20egocios)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+    ></iframe>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-text">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="ft-logo">
+                <img src="images/logo.png" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-3 offset-lg-1">
+              <div class="ft-contact">
+                <h1>Contact Us</h1>
+
+                <div class="contact-info">
+                  <p>Manager: Antonio Santos Ramos</p>
+                  <p>(12) 345 67890</p>
+                  <p>
+                    <a
+                      href="https://preview.colorlib.com/cdn-cgi/l/email-protection"
+                      class="__cf_email__"
+                      data-cfemail="c7aea9a1a8e9a4a8aba8b5abaea587a0aaa6aeabe9a4a8aa"
+                      >[email&#160;protected]</a
+                    >
+                  </p>
+                  <p>856 Cordia Extension Apt. 356, Lake, United State</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 offset-lg-1">
+              <div class="last-contact">
+                <div class="ft-newslatter">
+                  <h1>New latest</h1>
+                  <p>Get the latest updates and offers.</p>
+                  <form action="#" class="fn-form">
+                    <input class="text" type="text" placeholder="Email" />
+
+                    <div class="send"><i class="fas fa-paper-plane"></i></div>
+                  </form>
+                </div>
+
+                <div class="fa-social">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-twitch"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <ul class="footer-list">
+                <li><a href="#">Contact</a></li>
+                <li>Terms of use</li>
+                <li>Privacy</li>
+                <li>Environmental Policy</li>
+              </ul>
+            </div>
+            <div class="col-lg-5"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

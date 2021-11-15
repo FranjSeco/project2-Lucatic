@@ -1,0 +1,63 @@
+@import url(./colors.css);
+
+.contendorArriba {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: var(--main-blanco);
+  background-color: var(--main-negro);
+}
+
+.contendorAbajo {
+  text-align: center;
+}
+
+.contenedor {
+  display: flex;
+
+  flex-direction: column;
+
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 25px;
+
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.contenedor h3 {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.iconos {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.nombre {
+  display: flex;
+
+  justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .contenedor {
+    margin-left: 80px;
+    margin-right: 80px;
+    width: 80%;
+  }
+  .iconos {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contenedor {
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 80%;
+  }
+  .iconos {
+    text-align: center;
+  }
+}

@@ -1,0 +1,275 @@
+@import url(./colors.css);
+
+/*-------------------------------------------------------------------------------------------------*/
+.box1 {
+  background-image: url(../images/equipo/equipo2/Guille.jpg);
+  width: 330px;
+  height: 530px;
+  text-align: center;
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+.box1 .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box1:hover .enl {
+  text-decoration: none;
+  color: var(--main-negro);
+  transition: 0.8s;
+}
+.box1:visited .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box1:hover {
+  transition: 0.8s;
+  background-image: url(../images/equipo/equipo2/Guille1.png);
+  color: var(--main-negro);
+}
+.box1:hover .icons {
+  visibility: visible;
+  transition: 0.8s;
+}
+/*-------------------------------------------------------------------------------------------------*/
+.box2 {
+  background-image: url(../images/equipo/equipo2/Dani.jpg);
+  width: 330px;
+  height: 530px;
+  text-align: center;
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+  color: transparent;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-right: 2%;
+}
+.box2 .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box2:hover .enl {
+  text-decoration: none;
+  color: var(--main-negro);
+  transition: 0.8s;
+}
+.box2:visited .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box2:hover {
+  transition: 0.8s;
+  background-image: url(../images/equipo/equipo2/Dani1.png);
+  color: var(--main-negro);
+}
+.box2:hover .icons {
+  visibility: visible;
+  transition: 0.8s;
+}
+/*-------------------------------------------------------------------------------------------------*/
+.box3 {
+  background-image: url(../images/equipo/equipo2/Fran.jpg);
+  width: 330px;
+  height: 530px;
+  text-align: center;
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+  color: transparent;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-right: 2%;
+}
+.box3 .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box3:hover .enl {
+  text-decoration: none;
+  color: var(--main-negro);
+  transition: 0.8s;
+}
+.box3:visited .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box3:hover {
+  transition: 0.8s;
+  background-image: url(../images/equipo/equipo2/Fran1.png);
+  color: var(--main-negro);
+}
+.box3:hover .icons {
+  visibility: visible;
+  transition: 0.8s;
+}
+/*-------------------------------------------------------------------------------------------------*/
+.box4 {
+  background-image: url(../images/equipo/equipo2/Noe.jpg);
+  width: 330px;
+  height: 530px;
+  text-align: center;
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+  color: transparent;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-right: 2%;
+}
+.box4 .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box4:hover .enl {
+  text-decoration: none;
+  color: var(--main-negro);
+  transition: 0.8s;
+}
+.box4:visited .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box4:hover {
+  transition: 0.8s;
+  background-image: url(../images/equipo/equipo2/Noe1.png);
+  color: var(--main-negro);
+}
+
+.box4:hover .icons {
+  visibility: visible;
+  transition: 0.8s;
+}
+/*-------------------------------------------------------------------------------------------------*/
+.box5 {
+  background-image: url(../images/equipo/equipo2/Antonio.jpg);
+  width: 330px;
+  height: 530px;
+  text-align: center;
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+  color: transparent;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-right: 2%;
+}
+.box5 .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box5:hover .enl {
+  text-decoration: none;
+  color: var(--main-negro);
+  transition: 0.8s;
+}
+.box5:visited .enl {
+  text-decoration: none;
+  color: transparent;
+}
+.box5:hover {
+  transition: 0.8s;
+  background-image: url(../images/equipo/equipo2/Antonio1.png);
+  color: var(--main-negro);
+}
+.box5:hover .icons {
+  visibility: visible;
+  transition: 0.8s;
+}
+/*-------------------------------------------------------------------------------------------------*/
+.cuerpo {
+  display: grid;
+}
+.enlace {
+  text-decoration: none;
+  color: var(--main-blanco);
+}
+.fab {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+/*-------------------------------------------------------------------------------------------------*/
+.grid1 {
+  grid-column: 1;
+  grid-row: 1;
+  border: black 1px solid;
+  padding: 2%;
+  margin-bottom: 4%;
+}
+.grid2 {
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0% auto;
+  margin-top: 2%;
+  width: 35%;
+}
+.grid3 {
+  grid-column: 1;
+  grid-row: 3;
+}
+.grid3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.grid4 {
+  margin-top: 2%;
+  grid-column: 1;
+  grid-row: 4;
+}
+.grid4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+.grid5 {
+  margin-top: 2%;
+  grid-column: 1;
+  grid-row: 5;
+  border: black 1px solid;
+  padding: 2%;
+}
+/*-------------------------------------------------------------------------------------------------*/
+.icons {
+  visibility: hidden;
+  color: var(--main-rojo);
+  text-decoration: none;
+  margin-top: 71%;
+  padding: 3%;
+  background-color: var(--main-rojo);
+  color: var(--main-blanco);
+}
+.names {
+  padding-top: 40%;
+}
+.section__title {
+  margin-top: 4%;
+  width: 40%;
+}
+/*-------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 800px) {
+  .box3 {
+    margin-top: 2%;
+  }
+  .grid2 {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .box1,
+  .box2,
+  .box3,
+  .box4,
+  .box5 {
+    margin-right: 0%;
+    margin-left: 0%;
+    margin-top: 2%;
+  }
+  .grid2 {
+    width: 70%;
+  }
+  .grid4 {
+    margin-top: 0%;
+  }
+}

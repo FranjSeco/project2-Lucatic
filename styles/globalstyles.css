@@ -1,0 +1,47 @@
+/* GLOBAL STYLES */
+
+.section__title {
+  /*color: var(--main-rojo);
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0 0 60px 0;*/
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  color: var(--main-rojo);
+  font-size: 50px;
+  width: auto;
+  margin: 0 auto 60px auto;
+  border-radius: 5px;
+  background-image: url("../images/Valorant_Cover_Art1.jpg");
+  box-shadow: 5px 10px 29px 11px rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+}
+
+.section__btn {
+  align-self: flex-start;
+  margin: 30px 0;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid var(--main-rojo);
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  width: auto;
+  height: auto;
+  z-index: 10;
+}
+
+::selection {
+  background-color: var(--main-rojo);
+  color: white;
+}
+
+@media screen and (max-width: 540px) {
+  .section__title {
+    width: 90%;
+  }
+}

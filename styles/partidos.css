@@ -1,0 +1,398 @@
+/*Hoja de estilos*/
+@import url(./colors.css);
+
+.alde {
+  text-align: right;
+}
+.aliz {
+  text-align: left;
+}
+
+body {
+  display: grid;
+  background-color: var(--main-blanco);
+}
+
+.box1 {
+  display: flex;
+}
+
+.box2 {
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 2%;
+  text-align: center;
+}
+.box3 {
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 2px;
+  text-align: center;
+}
+.ch1 {
+  flex: 2;
+  padding: 3px;
+}
+.ch2 {
+  flex: 1;
+  border: 2px solid black;
+  padding: 3px;
+  background-color: var(--main-rojo);
+  font-weight: bold;
+}
+.ch3 {
+  flex: 0.2;
+  padding: 3px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: var(--main-gris);
+  text-align: right;
+}
+.ch4 {
+  flex: 0.5;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding: 3px;
+  background-color: var(--main-gris);
+}
+.ch5 {
+  flex: 0.5;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding: 3px;
+  background-color: var(--main-rojo);
+  font-weight: bold;
+}
+.ch6 {
+  flex: 0.5;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  padding: 3px;
+  background-color: var(--main-gris);
+}
+.ch7 {
+  flex: 0.2;
+  padding: 3px;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  background-color: var(--main-gris);
+  text-align: left;
+}
+.ch8 {
+  flex: 2;
+  padding: 3px;
+}
+.child1 {
+  flex: 1;
+  padding: 1%;
+}
+.child2 {
+  flex: 2;
+  border: 2px var(--main-rojo) solid;
+  box-shadow: 2px 2px 22px 2px var(--main-oscuro);
+  padding: 1%;
+  margin-right: 2%;
+  margin-top: 2%;
+}
+.child3 {
+  flex: 2;
+  border: 2px var(--main-rojo) solid;
+  box-shadow: 2px 2px 22px 2px var(--main-oscuro);
+  padding: 1%;
+  margin-top: 2%;
+}
+.child4 {
+  flex: 1;
+  padding: 1%;
+}
+
+header {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.en1 {
+  text-decoration: none;
+  color: var(--main-blanco);
+}
+
+.en2 {
+  text-decoration: none;
+  color: var(--main-negro);
+}
+.en2:hover {
+  color: var(--main-rojo);
+}
+
+.en3 {
+  text-decoration: none;
+  color: var(--main-negro);
+}
+
+.en3:hover {
+  color: var(--main-blanco);
+}
+
+.en1:hover {
+  color: var(--main-negro);
+}
+
+footer {
+  grid-column: 1;
+  grid-row: 5;
+}
+
+.img1 {
+  max-width: 100%;
+}
+
+.img1:hover {
+  opacity: 0.6;
+  transition: 1s;
+}
+
+.negro {
+  background-color: var(--main-negro);
+  color: var(--main-blanco);
+}
+.section1 {
+  grid-column: 1;
+  grid-row: 2;
+  padding: 1%;
+  margin-top: 1%;
+}
+
+.section2 {
+  grid-column: 1;
+  grid-row: 3;
+  padding: 1%;
+}
+
+.section3 {
+  grid-column: 1;
+  grid-row: 4;
+  padding: 1%;
+  margin-top: 2%;
+}
+
+.tit1,
+.tit3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  color: var(--main-rojo);
+  font-size: 50px;
+  border: 1px var(--main-negro) solid;
+  width: max-content;
+  margin: 0% auto;
+  background-image: url("../images/Valorant_Cover_Art1.jpg");
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+}
+
+.tit2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  border: 1px var(--main-blanco) solid;
+  background-color: var(--main-rojo);
+  padding: 0% 0%;
+  width: 47%;
+  margin: 0% auto;
+  box-shadow: 2px 2px 22px 2px rgb(66, 64, 64);
+  margin-top: 3%;
+}
+
+.tit2:hover {
+  border: 1px var(--main-negro) solid;
+}
+
+.tab1 {
+  margin: 6% auto;
+  font-family: "Open Sans Condensed", sans-serif;
+  width: 100%;
+  font-weight: bold;
+  border: 2px var(--main-negro) solid;
+  box-shadow: 2px 2px 22px 2px var(--main-oscuro);
+}
+
+td {
+  font-style: italic;
+  padding: 4px;
+  background-color: var(--main-gris);
+}
+th {
+  padding: 1%;
+}
+
+th,
+tr,
+td {
+  /*border: 1px black solid;*/
+  text-align: center;
+}
+
+.tit1-div {
+  margin: 0% auto;
+  width: max-content;
+}
+
+.tit1-div1 {
+  margin: 0% auto;
+  width: max-content;
+}
+
+.rojo {
+  background-color: var(--main-rojo);
+}
+
+.we {
+  background-color: var(--main-rojo);
+  padding-right: 4px;
+}
+
+@media only screen and (max-width: 1300px) {
+  .tit1-div1 {
+    width: max-content;
+  }
+  .tit1-div {
+    width: max-content;
+  }
+  .tit2 {
+    width: max-content;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .box2 {
+    flex-wrap: wrap;
+  }
+  .ch1 {
+    flex: 1;
+  }
+  .ch2 {
+    flex: 2;
+  }
+  .ch3 {
+    flex: 1;
+  }
+  .ch4 {
+    flex: 2;
+  }
+  .ch5 {
+    flex: 2;
+  }
+  .ch6 {
+    flex: 2;
+  }
+  .ch7 {
+    flex: 1;
+  }
+  .ch8 {
+    flex: 1;
+  }
+  .child1 {
+    display: none;
+  }
+  .child2 {
+    flex: 1;
+  }
+  .child3 {
+    flex: 1;
+  }
+  .child4 {
+    display: none;
+  }
+  .tit1-div {
+    width: max-content;
+  }
+  .tit1-div1 {
+    width: max-content;
+  }
+}
+
+.tit1 {
+  width: 40%;
+}
+.tit3 {
+  width: 70%;
+}
+.img1 {
+  margin-top: 6%;
+}
+.section1 {
+  flex-wrap: wrap;
+}
+.tit2 {
+  margin-top: 8%;
+}
+.tit1-div {
+  width: max-content;
+}
+.tit1-div1 {
+  width: max-content;
+}
+
+@media only screen and (max-width: 700px) {
+  .box1 {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .ch1 {
+    flex: none;
+  }
+  .ch2 {
+    flex: 2;
+  }
+  .ch3 {
+    flex: 1;
+  }
+  .ch4 {
+    flex: 2;
+  }
+  .ch5 {
+    flex: 1;
+  }
+  .ch6 {
+    flex: 2;
+  }
+  .ch7 {
+    flex: 1;
+  }
+  .ch8 {
+    display: none;
+  }
+  .child1 {
+    flex: none;
+  }
+  .child2 {
+    flex: 1;
+    margin: 0%;
+  }
+  .child3 {
+    flex: 1;
+  }
+  .child4 {
+    display: none;
+  }
+  .img1 {
+    margin-top: 6%;
+  }
+  .ord1 {
+    order: 1;
+  }
+  .tit2 {
+    margin: 1% auto;
+  }
+  .tit2 {
+    margin-top: 8%;
+  }
+  .tit1-div1 {
+    width: max-content;
+  }
+  .tit1-div {
+    width: max-content;
+  }
+}

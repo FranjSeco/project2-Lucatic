@@ -1,0 +1,153 @@
+@import url(colors.css);
+
+
+
+#exampleCheck1 {
+  width: 25px;
+  margin-right: 10px;
+}
+
+
+#fullForm {
+  height: 551px;
+  justify-content: space-between;
+}
+
+#links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#mapa {
+  filter: grayscale(100%);
+}
+
+
+
+
+
+
+.check {
+  display: flex;
+}
+
+.container.form {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.form-check-input:checked {
+  background: var(--main-rojo);
+  border: var(--main-rojo);
+}
+
+.form-control,
+.form-select {
+  border-radius: 0px;
+  border: 2px solid var(--main-oscuro);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #ff0000;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+
+
+.form ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+
+.formulario {
+  background: white;
+  color: black;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.links {
+  background: var(--main-negro);
+  color: white;
+  text-align: center;
+}
+
+.links i {
+  height: 55px;
+  width: 55px;
+  font-size: 20px;
+  line-height: 55px;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid var(--main-oscuro);
+
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.links i:hover {
+  background: var(--main-rojo);
+  border: var(--main-rojo);
+  color: var(--main-negro);
+  cursor: pointer;
+}
+
+.links .row {
+  justify-content: space-evenly;
+  padding-bottom: 30px;
+}
+
+
+.links .row:first-child {
+  padding-top: 30px;
+}
+
+
+
+
+.navbar ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1080px) {
+  #fullForm {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 992px) {
+  #fullForm {
+    height: initial;
+  }
+
+  #links {
+    padding-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  #linkContainer {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #linkContainer .col-sm-4 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .links .row {
+    padding-top: 30px;
+  }
+}
