@@ -1,6 +1,4 @@
-import { sum, aleatorio, restart, usuarioEleccion, stylesLagarto, stylesPapel, stylesPiedra, stylesSpock, stylesTijera } from './juego1';
-
-jest.useFakeTimers();
+import { limpiar, sum, aleatorio, restart, usuarioEleccion, stylesLagarto, stylesPapel, stylesPiedra, stylesSpock, stylesTijera } from './juego1';
 
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3);
@@ -49,11 +47,4 @@ test('Contenido en página html', () => {
   `;
 });
 
-
-
-
-
-
-
-//window.onload
 

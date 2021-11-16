@@ -40,54 +40,53 @@ const restart = () => {
   usuarioEleccion = 0;
   usuarioPuntuacion = 0;
   maquinaPuntuacion = 0;
-  if(document.querySelector('#divUsuario') === null){
+  if (document.querySelector('#divUsuario') === null) {
     console.log("ERROR");
-  }else{
+  } else {
     document.querySelector('#divUsuario').style.backgroundImage = 'none';
   }
-  if(document.querySelector('#divMaquina') === null){
+  if (document.querySelector('#divMaquina') === null) {
     console.log("ERROR");
-  }else{
+  } else {
     document.querySelector('#divMaquina').style.backgroundImage = 'none';
   }
-  if(document.querySelector('#lagarto') === null){
+  if (document.querySelector('#lagarto') === null) {
     console.log("ERROR");
-  }else{
+  } else {
     document.querySelector('#lagarto').style = 'background-color: none;';
   }
-  if(document.querySelector('#papel') === null){
+  if (document.querySelector('#papel') === null) {
     console.log("ERROR");
-  }else{
+  } else {
     document.querySelector('#papel').style = 'background-color: none;';
   }
-  if(document.querySelector('#piedra') === null){
+  if (document.querySelector('#piedra') === null) {
     console.log("ERROR");
-  }else{
+  } else {
     document.querySelector('#piedra').style = 'background-color: none;';
   }
-  if(document.querySelector('#piedra') === null){
+  if (document.querySelector('#piedra') === null) {
     console.log("ERROR");
-  }else{
+  } else {
     document.querySelector('#spock').style = 'background-color: none;';
   }
-  if(document.querySelector('#tijera')=== null){
+  if (document.querySelector('#tijera') === null) {
     console.log("ERROR");
-  }else{
+  } else {
     document.querySelector('#tijera').style = 'background-color: none;';
   }
-  if(document.querySelector('#situacion')=== null){
+  if (document.querySelector('#situacion') === null) {
     console.log("ERROR");
-  }else{
+  } else {
     document.querySelector('#situacion').innerHTML = `Resultado`;
   }
-  if(document.querySelector('#resultado')=== null){
+  if (document.querySelector('#resultado') === null) {
     console.log("ERROR");
-  }else{
+  } else {
     document.querySelector('#resultado').innerHTML = `Contador`;
   }
-  
-}
 
+}
 const seleccion = () => {
   let al = aleatorio();
   let seleccionMaquina = array[al];
@@ -182,18 +181,24 @@ const seleccion = () => {
   }
 }
 // ADDEVENTLISTENERS
+
+if (document.querySelector('#seleccion') === null) {
+  console.log('NO ERROR TODO BIEN');
+} else {
+  document.querySelector('#seleccion').addEventListener('click', () => {
+    if (usuarioEleccion == 0) {
+      document.querySelector('#resultado').innerHTML = `Elige una opcion`;
+    } else {
+      seleccion();
+    }
+  });
+}
+
 if (document.querySelector('#limpiar') === null) {
   console.log('NO ERROR TODO BIEN');
 } else {
   document.querySelector('#limpiar').addEventListener('click', limpiar);
 }
-
-if (document.querySelector('#seleccion') === null) {
-  console.log('NO ERROR TODO BIEN');
-} else {
-  document.querySelector('#seleccion').addEventListener('click', seleccion);
-}
-
 if (document.querySelector('#start') === null) {
   console.log('NO ERROR TODO BIEN');
 } else {
@@ -275,5 +280,4 @@ function sum(a, b) {
   return a + b;
 }
 
-module.exports = { sum, aleatorio, restart, usuarioEleccion, stylesLagarto, stylesPapel, stylesPiedra, stylesSpock, stylesTijera };
-
+module.exports = { limpiar, sum, aleatorio, restart, usuarioEleccion, stylesLagarto, stylesPapel, stylesPiedra, stylesSpock, stylesTijera };
