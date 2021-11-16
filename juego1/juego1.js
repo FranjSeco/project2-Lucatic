@@ -1,5 +1,4 @@
 // VARIABLES
-
 let usuarioPuntuacion = 0;
 let maquinaPuntuacion = 0;
 let usuarioEleccion = 0;
@@ -183,7 +182,6 @@ const seleccion = () => {
   }
 }
 // ADDEVENTLISTENERS
-
 if (document.querySelector('#limpiar') === null) {
   console.log('NO ERROR TODO BIEN');
 } else {
@@ -276,5 +274,6 @@ if (document.querySelector('#tijera') === null) {
 function sum(a, b) {
   return a + b;
 }
-module.exports = { sum, aleatorio, restart, usuarioEleccion };
+
+module.exports = { sum, aleatorio, restart, usuarioEleccion, stylesLagarto, stylesPapel, stylesPiedra, stylesSpock, stylesTijera };
 
