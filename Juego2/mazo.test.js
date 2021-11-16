@@ -1,40 +1,55 @@
 import { jest } from '@jest/globals';
-import {generarMazo, victoriaDerrota,Carta} from './Script';
+import {contador,mazo,generarMazo,puntajeMaquina,puntajeUsuario} from './Script';
 
 jest.useFakeTimers();
 
-/*
-test('sumar 1 + 2 es igual a 3', () => {
-  expect(suma(1, 2)).toBe(3);
+
+test('Contenido en página html', () => {
+  document.body.innerHTML = `
+  <button onclick="plantarse()" id="plant">Plantarse</button>
+  `;
 });
 
-test('the data is peanut butter', async () => {
-  const data = await fetchData();
-  expect(data).toBe('peanut butter');
-});
-
-test('the fetch fails with an error', async () => {
-  expect.assertions(1);
-  try {
-    await fetchData();
-  } catch (e) {
-    expect(e).toMatch('error');
-  }
-});
-
-*/
-
-/*
-test('the data is peanut butter', async () => {
-  await expect(victoriaDerrota("derrota")).resolves.toBeGreaterThan(-1);
+test('generar mazo', () => {
+  expect(generarMazo()).not.toBe(mazo == null);
 });
 
 
-test('sumar 1 + 2 es igual a 3', () => {
-var mazo =generarMazo();
+test('Imgen de cartas', () => {
+  expect(mazo[0].imagen).not.toBe(null);
+  expect(mazo[0].imagen).toMatch("https://deckofcardsapi.com/static/img/AH.png");
+  
+  expect(mazo[1].imagen).toMatch("https://deckofcardsapi.com/static/img/2H.png");
+  expect(mazo[2].imagen).toMatch("https://deckofcardsapi.com/static/img/3H.png");
+});
 
-  expect(generarMazo).toBeInstanceOf(Carta);
 
+test('puntuaciones', () => {
+ 
+  expect(puntajeUsuario).not.toBe(null);
+  expect( typeof puntajeUsuario).toBe("number");
+  expect(puntajeUsuario).toBeGreaterThan(-1);
+
+  expect(puntajeMaquina).not.toBe(null);
+  expect( typeof puntajeMaquina).toBe("number");
+  expect(puntajeMaquina).toBeGreaterThan(-1);
+});
+
+
+test('clase carta', () => {
+ 
+  expect( typeof mazo[50]).toBe("object");
+  expect( typeof mazo[30]).toBe("object");
+  expect( typeof mazo[40]).toBe("object");
+
+  expect( typeof mazo[50].valor).toBe("number");
+  expect(  mazo[50].valor).toBe(10);
+});
+
+
+test('variable contador de cartas', () => {
+ 
+  expect( typeof contador).toBe("number");
+  expect(contador).toBeGreaterThan(-1);
 
 });
-*/
