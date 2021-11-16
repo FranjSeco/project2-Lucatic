@@ -1,7 +1,7 @@
 // VARIABLES
-let usuarioEleccion;
 let usuarioPuntuacion = 0;
 let maquinaPuntuacion = 0;
+let usuarioEleccion = 0;
 let stylesLagarto = `
   background-image: url('../images2/Lagarto.PNG');
 `;
@@ -24,6 +24,7 @@ const aleatorio = () => {
   let numero = Math.floor(Math.random() * ((4 + 1) - 0) + 0);
   return numero;
 }
+
 const limpiar = () => {
   document.querySelector('#divUsuario').style.backgroundImage = 'none';
   document.querySelector('#divMaquina').style.backgroundImage = 'none';
@@ -143,60 +144,101 @@ const seleccion = () => {
     document.querySelector('#resultado').innerHTML = `Sin datos`;
   }
 }
-
 // ADDEVENTLISTENERS
 
-document.querySelector('#limpiar').addEventListener('click', limpiar);
-document.querySelector('#seleccion').addEventListener('click', seleccion);
+if (document.querySelector('#limpiar') === null) {
+  console.log('NO ERROR TODO BIEN');
+} else {
+  document.querySelector('#limpiar').addEventListener('click', limpiar);
+}
 
-document.querySelector('#start').addEventListener('click', restart);
-
-document.querySelector('#lagarto').addEventListener('click', () => {
-  // document.querySelector('#divUsuario').style = stylesLargarto;
-  document.querySelector('#lagarto').style = 'background-color: var(--main-rojo);';
-  document.querySelector('#papel').style = 'background-color: none;';
-  document.querySelector('#piedra').style = 'background-color: none;';
-  document.querySelector('#spock').style = 'background-color: none;';
-  document.querySelector('#tijera').style = 'background-color: none;';
-  usuarioEleccion = stylesLagarto;
-})
-document.querySelector('#papel').addEventListener('click', () => {
-  // document.querySelector('#divUsuario').style = stylesPapel;
-  document.querySelector('#lagarto').style = 'background-color: none;';
-  document.querySelector('#papel').style = 'background-color: var(--main-rojo);';
-  document.querySelector('#piedra').style = 'background-color: none;';
-  document.querySelector('#spock').style = 'background-color: none;';
-  document.querySelector('#tijera').style = 'background-color: none;';
-  usuarioEleccion = stylesPapel;
-})
-document.querySelector('#piedra').addEventListener('click', () => {
-  // document.querySelector('#divUsuario').style = stylesPiedra;
-  document.querySelector('#lagarto').style = 'background-color: none;';
-  document.querySelector('#papel').style = 'background-color: none;';
-  document.querySelector('#piedra').style = 'background-color: var(--main-rojo);';
-  document.querySelector('#spock').style = 'background-color: none;';
-  document.querySelector('#tijera').style = 'background-color: none;';
-  usuarioEleccion = stylesPiedra;
-})
-document.querySelector('#spock').addEventListener('click', () => {
-  // document.querySelector('#divUsuario').style = stylesSpock;
-  document.querySelector('#lagarto').style = 'background-color: none;';
-  document.querySelector('#papel').style = 'background-color: none;';
-  document.querySelector('#piedra').style = 'background-color: none;';
-  document.querySelector('#spock').style = 'background-color: var(--main-rojo);';
-  document.querySelector('#tijera').style = 'background-color: none;';
-  usuarioEleccion = stylesSpock;
-})
-document.querySelector('#tijera').addEventListener('click', () => {
-  // document.querySelector('#divUsuario').style = stylesTijera;
-  document.querySelector('#lagarto').style = 'background-color: none;';
-  document.querySelector('#papel').style = 'background-color: none;';
-  document.querySelector('#piedra').style = 'background-color: none;';
-  document.querySelector('#spock').style = 'background-color: none;';
-  document.querySelector('#tijera').style = 'background-color: var(--main-rojo);';
-  usuarioEleccion = stylesTijera;
-})
+if (document.querySelector('#seleccion') === null) {
+  console.log('NO ERROR TODO BIEN');
+} else {
+  document.querySelector('#seleccion').addEventListener('click', seleccion);
+}
 
 
+if (document.querySelector('#start') === null) {
+  console.log('NO ERROR TODO BIEN');
+} else {
+  document.querySelector('#start').addEventListener('click', restart);
+}
+
+if (document.querySelector('#lagarto') === null) {
+  console.log('NO ERROR TODO BIEN');
+} else {
+  document.querySelector('#lagarto').addEventListener('click', () => {
+    // document.querySelector('#divUsuario').style = stylesLargarto;
+    document.querySelector('#lagarto').style = 'background-color: var(--main-rojo);';
+    document.querySelector('#papel').style = 'background-color: none;';
+    document.querySelector('#piedra').style = 'background-color: none;';
+    document.querySelector('#spock').style = 'background-color: none;';
+    document.querySelector('#tijera').style = 'background-color: none;';
+    usuarioEleccion = stylesLagarto;
+  })
+}
+
+if (document.querySelector('#papel') === null) {
+  console.log('NO ERROR TODO BIEN');
+} else {
+  document.querySelector('#papel').addEventListener('click', () => {
+    // document.querySelector('#divUsuario').style = stylesPapel;
+    document.querySelector('#lagarto').style = 'background-color: none;';
+    document.querySelector('#papel').style = 'background-color: var(--main-rojo);';
+    document.querySelector('#piedra').style = 'background-color: none;';
+    document.querySelector('#spock').style = 'background-color: none;';
+    document.querySelector('#tijera').style = 'background-color: none;';
+    usuarioEleccion = stylesPapel;
+  })
+}
+
+if (document.querySelector('#piedra') === null) {
+  console.log('NO ERROR TODO BIEN');
+} else {
+  document.querySelector('#piedra').addEventListener('click', () => {
+    // document.querySelector('#divUsuario').style = stylesPiedra;
+    document.querySelector('#lagarto').style = 'background-color: none;';
+    document.querySelector('#papel').style = 'background-color: none;';
+    document.querySelector('#piedra').style = 'background-color: var(--main-rojo);';
+    document.querySelector('#spock').style = 'background-color: none;';
+    document.querySelector('#tijera').style = 'background-color: none;';
+    usuarioEleccion = stylesPiedra;
+  })
+}
 
 
+if (document.querySelector('#spock') === null) {
+  console.log('NO ERROR TODO BIEN');
+} else {
+  document.querySelector('#spock').addEventListener('click', () => {
+    // document.querySelector('#divUsuario').style = stylesSpock;
+    document.querySelector('#lagarto').style = 'background-color: none;';
+    document.querySelector('#papel').style = 'background-color: none;';
+    document.querySelector('#piedra').style = 'background-color: none;';
+    document.querySelector('#spock').style = 'background-color: var(--main-rojo);';
+    document.querySelector('#tijera').style = 'background-color: none;';
+    usuarioEleccion = stylesSpock;
+  })
+}
+
+if (document.querySelector('#tijera') === null) {
+  console.log('NO ERROR TODO BIEN');
+} else {
+  document.querySelector('#tijera').addEventListener('click', () => {
+    // document.querySelector('#divUsuario').style = stylesTijera;
+    document.querySelector('#lagarto').style = 'background-color: none;';
+    document.querySelector('#papel').style = 'background-color: none;';
+    document.querySelector('#piedra').style = 'background-color: none;';
+    document.querySelector('#spock').style = 'background-color: none;';
+    document.querySelector('#tijera').style = 'background-color: var(--main-rojo);';
+    usuarioEleccion = stylesTijera;
+  })
+}
+
+function sum(a, b) {
+  return a + b;
+}
+
+
+module.exports = { sum, aleatorio, restart };
