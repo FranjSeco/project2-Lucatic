@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": "jest --coverage --env=jsdom",
+    "test:watch": "npm run test -- --watch"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}

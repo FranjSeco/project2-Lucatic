@@ -8,8 +8,8 @@ class Carta {
   }
 }
 
-//document.querySelector("#uno").disabled = true;
-//document.querySelector("#once").disabled = true;
+document.querySelector("#uno").disabled = true;
+document.querySelector("#once").disabled = true;
 
 let mazo = [];
 let palos = ["Corazones", "Treboles", "Diamantes", "Picas"];
@@ -234,6 +234,7 @@ function plantarse() {
   }
 
   if (puntajeUsuario == 21 && puntajeMaquina == 21) {
+    ///////////////////////////////////
   }
 }
 
