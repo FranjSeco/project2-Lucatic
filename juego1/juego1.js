@@ -1,4 +1,5 @@
 // VARIABLES
+
 let usuarioPuntuacion = 0;
 let maquinaPuntuacion = 0;
 let usuarioEleccion = 0;
@@ -40,15 +41,52 @@ const restart = () => {
   usuarioEleccion = 0;
   usuarioPuntuacion = 0;
   maquinaPuntuacion = 0;
-  document.querySelector('#divUsuario').style.backgroundImage = 'none';
-  document.querySelector('#divMaquina').style.backgroundImage = 'none';
-  document.querySelector('#lagarto').style = 'background-color: none;';
-  document.querySelector('#papel').style = 'background-color: none;';
-  document.querySelector('#piedra').style = 'background-color: none;';
-  document.querySelector('#spock').style = 'background-color: none;';
-  document.querySelector('#tijera').style = 'background-color: none;';
-  document.querySelector('#situacion').innerHTML = `Resultado`;
-  document.querySelector('#resultado').innerHTML = `Contador`;
+  if(document.querySelector('#divUsuario') === null){
+    console.log("ERROR");
+  }else{
+    document.querySelector('#divUsuario').style.backgroundImage = 'none';
+  }
+  if(document.querySelector('#divMaquina') === null){
+    console.log("ERROR");
+  }else{
+    document.querySelector('#divMaquina').style.backgroundImage = 'none';
+  }
+  if(document.querySelector('#lagarto') === null){
+    console.log("ERROR");
+  }else{
+    document.querySelector('#lagarto').style = 'background-color: none;';
+  }
+  if(document.querySelector('#papel') === null){
+    console.log("ERROR");
+  }else{
+    document.querySelector('#papel').style = 'background-color: none;';
+  }
+  if(document.querySelector('#piedra') === null){
+    console.log("ERROR");
+  }else{
+    document.querySelector('#piedra').style = 'background-color: none;';
+  }
+  if(document.querySelector('#piedra') === null){
+    console.log("ERROR");
+  }else{
+    document.querySelector('#spock').style = 'background-color: none;';
+  }
+  if(document.querySelector('#tijera')=== null){
+    console.log("ERROR");
+  }else{
+    document.querySelector('#tijera').style = 'background-color: none;';
+  }
+  if(document.querySelector('#situacion')=== null){
+    console.log("ERROR");
+  }else{
+    document.querySelector('#situacion').innerHTML = `Resultado`;
+  }
+  if(document.querySelector('#resultado')=== null){
+    console.log("ERROR");
+  }else{
+    document.querySelector('#resultado').innerHTML = `Contador`;
+  }
+  
 }
 
 const seleccion = () => {
@@ -158,7 +196,6 @@ if (document.querySelector('#seleccion') === null) {
   document.querySelector('#seleccion').addEventListener('click', seleccion);
 }
 
-
 if (document.querySelector('#start') === null) {
   console.log('NO ERROR TODO BIEN');
 } else {
@@ -239,6 +276,5 @@ if (document.querySelector('#tijera') === null) {
 function sum(a, b) {
   return a + b;
 }
+module.exports = { sum, aleatorio, restart, usuarioEleccion };
 
-
-module.exports = { sum, aleatorio, restart };
