@@ -274,5 +274,4 @@ function sum(a, b) {
   return a + b;
 }
 
-
 module.exports = { limpiar, sum, aleatorio, restart, usuarioEleccion, stylesLagarto, stylesPapel, stylesPiedra, stylesSpock, stylesTijera };
