@@ -15,7 +15,6 @@ let palosLetra = ["H", "C", "D", "S"];
 let numCartas = 52;
 let puntajeUsuario = 0;
 let puntajeMaquina = 0;
-let vic = true;
 let mano = [];
 let contador = 0;
 var turno = "jugador";
@@ -94,8 +93,7 @@ for (let j = 0; j < palos.length; j++) {
     }
   }
 }
-console.log(mazo);
-return mazo;
+
 }
 
 
@@ -334,7 +332,7 @@ if( document.querySelector("#coger")==null){
 //////////////////   VICTORIADERROTA
 
 async function victoriaDerrota(vic) {
-  resultado="";
+  
   if (vic == "usuPerd") {
     try {
       if ((await window.localStorage.getItem("derrota")) == undefined) {
@@ -348,7 +346,7 @@ async function victoriaDerrota(vic) {
     } catch (e) {
       console.log("Error!", e);
     }
-    resultado=window.localStorage.getItem("derrota");
+   
   }
   if (vic == "usuGan") {
     try {
@@ -363,7 +361,7 @@ async function victoriaDerrota(vic) {
     } catch (e) {
       console.log("Error!", e);
     }
-    resultado=window.localStorage.getItem("victoria");
+    
   }
 
   if (vic == "empate") {
@@ -380,14 +378,14 @@ async function victoriaDerrota(vic) {
     } catch (e) {
       console.log("Error!", e);
     }
-    resultado=window.localStorage.getItem("empate");
+   
   }
-return window.localStorage.getItem("derrota");
+
   console.log(window.localStorage.getItem("derrota") + "derrota");
   console.log(window.localStorage.getItem("victoria") + "victoria");
 }
 
 
-module.exports = { victoriaDerrota, Carta, plantarse, ace, cogerCarta};
+module.exports = { contador, Carta, plantarse, ace, cogerCarta,mazo,generarMazo,puntajeMaquina,puntajeUsuario};
 
 
