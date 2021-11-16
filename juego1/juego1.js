@@ -182,7 +182,6 @@ const seleccion = () => {
   }
 }
 // ADDEVENTLISTENERS
-
 if (document.querySelector('#limpiar') === null) {
   console.log('NO ERROR TODO BIEN');
 } else {
