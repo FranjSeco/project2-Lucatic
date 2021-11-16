@@ -388,7 +388,6 @@ return window.localStorage.getItem("derrota");
 }
 
 
-module.exports = {victoriaDerrota};
-module.exports =  {generarMazo};
+module.exports = { victoriaDerrota, Carta, plantarse, ace, cogerCarta};
 
 

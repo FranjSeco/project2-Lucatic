@@ -28,7 +28,7 @@ test('the fetch fails with an error', async () => {
 test('the data is peanut butter', async () => {
   await expect(victoriaDerrota("derrota")).resolves.toBeGreaterThan(-1);
 });
-*/
+
 
 test('sumar 1 + 2 es igual a 3', () => {
 var mazo =generarMazo();
@@ -37,3 +37,4 @@ var mazo =generarMazo();
 
 
 });
+*/
