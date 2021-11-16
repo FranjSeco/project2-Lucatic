@@ -185,7 +185,13 @@ const seleccion = () => {
 if (document.querySelector('#seleccion') === null) {
   console.log('NO ERROR TODO BIEN');
 } else {
-  document.querySelector('#seleccion').addEventListener('click', seleccion);
+  document.querySelector('#seleccion').addEventListener('click', () => {
+    if (usuarioEleccion == 0) {
+      document.querySelector('#resultado').innerHTML = `Elige una opcion`;
+    } else {
+      seleccion();
+    }
+  });
 }
 
 if (document.querySelector('#limpiar') === null) {
