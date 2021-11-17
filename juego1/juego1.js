@@ -2,6 +2,10 @@
 let usuarioPuntuacion = 0;
 let maquinaPuntuacion = 0;
 let usuarioEleccion = 0;
+let modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+let btn = document.getElementById("myBtn");
 let stylesLagarto = `
   background-image: url('../images2/Lagarto.PNG');
 `;
@@ -25,6 +29,27 @@ const aleatorio = () => {
   return numero;
 }
 
+// When the user clicks on the button, open the modal
+function information() {
+  modal.style.display = "flex";
+  modal.style.transitionDelay = "2s";
+  modal.style.alignContent = "center";
+};
+
+if (btn == null) {
+  console.log('ERROR');
+} else {
+  btn.addEventListener('click', information);
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    btn.style.display = "inline";
+    modal.style.display = "none";
+  }
+};
+
 const limpiar = () => {
   document.querySelector('#divUsuario').style.backgroundImage = 'none';
   document.querySelector('#divMaquina').style.backgroundImage = 'none';
@@ -33,6 +58,8 @@ const limpiar = () => {
   document.querySelector('#piedra').style = 'background-color: none;';
   document.querySelector('#spock').style = 'background-color: none;';
   document.querySelector('#tijera').style = 'background-color: none;';
+  document.querySelector('#divUsuario').style.backgroundColor = 'transparent';
+  document.querySelector('#divMaquina').style.backgroundColor = 'transparent';
   usuarioEleccion = '';
 }
 
@@ -40,6 +67,7 @@ const restart = () => {
   usuarioEleccion = 0;
   usuarioPuntuacion = 0;
   maquinaPuntuacion = 0;
+
   if (document.querySelector('#divUsuario') === null) {
     console.log("ERROR");
   } else {
@@ -75,17 +103,26 @@ const restart = () => {
   } else {
     document.querySelector('#tijera').style = 'background-color: none;';
   }
-  if (document.querySelector('#situacion') === null) {
+  if (document.querySelector('#divUsuario') === null) {
     console.log("ERROR");
   } else {
-    document.querySelector('#situacion').innerHTML = `Resultado`;
+    document.querySelector('#divUsuario').style.backgroundColor = 'transparent';
   }
-  if (document.querySelector('#resultado') === null) {
+  if (document.querySelector('#divMaquina') === null) {
     console.log("ERROR");
   } else {
-    document.querySelector('#resultado').innerHTML = `Contador`;
+    document.querySelector('#divMaquina').style.backgroundColor = 'transparent';
   }
-
+  if (document.querySelector('#user') === null) {
+    console.log("ERROR");
+  } else {
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+  }
+  if (document.querySelector('#cpu') === null) {
+    console.log("ERROR");
+  } else {
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+  }
 }
 const seleccion = () => {
   let al = aleatorio();
@@ -94,90 +131,132 @@ const seleccion = () => {
   document.querySelector('#divMaquina').style = seleccionMaquina;
   document.querySelector('#divUsuario').style = finalElection;
   if ((finalElection == stylesTijera) && (seleccionMaquina == stylesPapel)) {
-    document.querySelector('#resultado').innerHTML = `Gana el usuario`;
     usuarioPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
+    document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
   } else if ((finalElection == stylesPapel) && (seleccionMaquina == stylesPiedra)) {
-    document.querySelector('#resultado').innerHTML = `Gana el usuario`;
     usuarioPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
+    document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
   } else if ((finalElection == stylesTijera) && (seleccionMaquina == stylesLagarto)) {
-    document.querySelector('#resultado').innerHTML = `Gana el usuario`;
     usuarioPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
+
+    document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
   } else if ((finalElection == stylesPiedra) && (seleccionMaquina == stylesLagarto)) {
-    document.querySelector('#resultado').innerHTML = `Gana el usuario`;
     usuarioPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
+    document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
   } else if ((finalElection == stylesLagarto) && (seleccionMaquina == stylesSpock)) {
-    document.querySelector('#resultado').innerHTML = `Gana el usuario`;
     usuarioPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
+    document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
   } else if ((finalElection == stylesSpock) && (seleccionMaquina == stylesTijera)) {
-    document.querySelector('#resultado').innerHTML = `Gana el usuario`;
     usuarioPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
+    document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
   } else if ((finalElection == stylesLagarto) && (seleccionMaquina == stylesPapel)) {
-    document.querySelector('#resultado').innerHTML = `Gana el usuario`;
     usuarioPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
+    document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
   } else if ((finalElection == stylesPapel) && (seleccionMaquina == stylesSpock)) {
-    document.querySelector('#resultado').innerHTML = `Gana el usuario`;
     usuarioPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
+    document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
   } else if ((finalElection == stylesSpock) && (seleccionMaquina == stylesPiedra)) {
-    document.querySelector('#resultado').innerHTML = `Gana el usuario`;
     usuarioPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
+    document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
   } else if ((finalElection == stylesPiedra) && (seleccionMaquina == stylesTijera)) {
-    document.querySelector('#resultado').innerHTML = `Gana el usuario`;
     usuarioPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
+    document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
   } else if ((finalElection == stylesPapel) && (seleccionMaquina == stylesTijera)) {
-    document.querySelector('#resultado').innerHTML = `Gana la maquina`;
     maquinaPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
+    document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
   } else if ((finalElection == stylesPiedra) && (seleccionMaquina == stylesPapel)) {
-    document.querySelector('#resultado').innerHTML = `Gana la maquina`;
     maquinaPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
+    document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
   } else if ((finalElection == stylesLagarto) && (seleccionMaquina == stylesPiedra)) {
-    document.querySelector('#resultado').innerHTML = `Gana la maquina`;
     maquinaPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
+    document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
   } else if ((finalElection == stylesLagarto) && (seleccionMaquina == stylesTijera)) {
-    document.querySelector('#resultado').innerHTML = `Gana la maquina`;
     maquinaPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
+    document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
   } else if ((finalElection == stylesSpock) && (seleccionMaquina == stylesLagarto)) {
-    document.querySelector('#resultado').innerHTML = `Gana la maquina`;
     maquinaPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
+    document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
   } else if ((finalElection == stylesTijera) && (seleccionMaquina == stylesSpock)) {
-    document.querySelector('#resultado').innerHTML = `Gana la maquina`;
     maquinaPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
+    document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
   } else if ((finalElection == stylesPapel) && (seleccionMaquina == stylesLagarto)) {
-    document.querySelector('#resultado').innerHTML = `Gana la maquina`;
     maquinaPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
+    document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
   } else if ((finalElection == stylesSpock) && (seleccionMaquina == stylesPapel)) {
-    document.querySelector('#resultado').innerHTML = `Gana la maquina`;
     maquinaPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
+    document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
   } else if ((finalElection == stylesPiedra) && (seleccionMaquina == stylesSpock)) {
-    document.querySelector('#resultado').innerHTML = `Gana la maquina`;
     maquinaPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
+    document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
   } else if ((finalElection == stylesTijera) && (seleccionMaquina == stylesPiedra)) {
-    document.querySelector('#resultado').innerHTML = `Gana la maquina`;
     maquinaPuntuacion++;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
+    document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
   } else if (finalElection == seleccionMaquina) {
-    document.querySelector('#resultado').innerHTML = `Empate`;
-    document.querySelector('#situacion').innerHTML = `Usuario ${usuarioPuntuacion} Maquina ${maquinaPuntuacion}`
-  } else {
-    document.querySelector('#resultado').innerHTML = `Sin datos`;
+    document.querySelector('#user').innerHTML = usuarioPuntuacion;
+    document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
+    document.querySelector('#divUsuario').style.backgroundColor = '#D3D338';
+    document.querySelector('#divMaquina').style.backgroundColor = '#D3D338';
+    console.log('empate')
   }
 }
 // ADDEVENTLISTENERS

@@ -27,54 +27,23 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div class="row">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid navbar">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="fas fa-hamburger"></i>
-            </button>
-            <img id="logoNav" src="images/logoNav.png" alt="" />
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul class="navbar-nav mb-2 mb-lg-0">
-                <li><a class="nav-link" href="../index-EN.html">Home</a></li>
-                <li><a class="nav-link" href="../equipo1-EN.html">Team</a></li>
-                <li>
-                  <a class="nav-link" href="../partidos-EN.html">Matches</a>
-                </li>
-                <li><a class="nav-link" href="../noticias-EN.html">News</a></li>
-                <li>
-                  <a class="nav-link" href="../contacta-EN.html" id="ultimaOpcion">Contact</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="./juego1-EN.html">Game1</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Language
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li>
-                      <a class="dropdown-item" href="./juego1-EN.html">English</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="./juego1.html">Spanish</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+  <div id="game">
+    <div class="bottom">
+      <img onclick="location.href='../juego1/juego1.html';" src="../images2/Piedra.PNG" alt="" />
+      <i onclick="location.href='#';" class="fas fa-money-bill-alt fa-2x"></i>
     </div>
-  </header>
+    <div class="bottom">
+      <p id="cpu">0</p>
+      <p>|</p>
+      <p id="user">0</p>
+    </div>
+    <div class="bottom">
+      <i id="myBtn" onclick="information()" class="fas fa-info-circle fa-2x"></i>
 
+      <i id="cog" class="fas fa-cog fa-2x"></i>
+    </div>
+  </div>
   <section>
-    <h2 class="section__title title-juego">Game zone: paper, rock, scissors, lizard, spock</h2>
     <div class="juego__wrapper">
       <div class="juego__info">
         <!-- VIDEO -->
@@ -133,71 +102,6 @@
       </div>
     </div>
   </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-text">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="ft-logo">
-              <img src="../images/logo.png" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-3 offset-lg-1">
-            <div class="ft-contact">
-              <h1>Contact Us</h1>
-
-              <div class="contact-info">
-                <p>Manager: Antonio Santos Ramos</p>
-                <p>(12) 345 67890</p>
-                <p>
-                  <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__"
-                    data-cfemail="c7aea9a1a8e9a4a8aba8b5abaea587a0aaa6aeabe9a4a8aa">[email&#160;protected]</a>
-                </p>
-                <p>856 Cordia Extension Apt. 356, Lake, United State</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 offset-lg-1">
-            <div class="last-contact">
-              <div class="ft-newslatter">
-                <h1>New latest</h1>
-                <p>Get the latest updates and offers.</p>
-                <form action="#" class="fn-form">
-                  <input class="text" type="text" placeholder="Email" />
-
-                  <div class="send"><i class="fas fa-paper-plane"></i></div>
-                </form>
-              </div>
-
-              <div class="fa-social">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-twitch"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="copyright">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7">
-            <ul class="footer-list">
-              <li><a href="#">Contact</a></li>
-              <li>Terms of use</li>
-              <li>Privacy</li>
-              <li>Environmental Policy</li>
-            </ul>
-          </div>
-          <div class="col-lg-5"></div>
-        </div>
-      </div>
-    </div>
-  </footer>
   <script language="javascript" type="module" src="juego1.js"></script>
 
 </body>
