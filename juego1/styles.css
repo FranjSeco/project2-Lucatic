@@ -172,9 +172,6 @@ section {
 .boton:hover {
   color: var(--main-negro);
   border: 1px var(--main-negro) solid;
-<<<<<<< HEAD
-}
-=======
 }
 
 /* NAVBAR Y POPUP */
@@ -308,4 +305,3 @@ section {
   margin: 0px;
   padding: 0px;
 }
->>>>>>> 5b6c0488e4739c2ee76891715641dcca2dbc4053
