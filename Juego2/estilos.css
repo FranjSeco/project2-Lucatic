@@ -61,6 +61,15 @@ body {
   text-align: center;
 }
 
+#img img,
+#usuario img {
+  height: 208.4px;
+  width: 150px;
+  margin-right: 50px;
+
+  filter: invert(0%) saturate(0%) contrast(200%);
+}
+
 #game {
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */

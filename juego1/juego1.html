@@ -27,53 +27,29 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div class="row">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid navbar">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="fas fa-hamburger"></i>
-            </button>
-            <img id="logoNav" src="../images/logoNav.png" alt="" />
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul class="navbar-nav mb-2 mb-lg-0">
-                <li><a class="nav-link" href="../index.html">Home</a></li>
-                <li><a class="nav-link" href="../equipo1.html">Equipo</a></li>
-                <li><a class="nav-link" href="../partidos.html">Partidas</a></li>
-                <li><a class="nav-link" href="../noticias.html">Noticias</a></li>
-                <li>
-                  <a class="nav-link" href="../contacta.html" id="ultimaOpcion">Contacta</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="./juego1.html">Juego1</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Idiomas
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li>
-                      <a class="dropdown-item" href="./juego1-EN.html">Ingles</a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="./juego1.html">Español</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
+  <div id="game">
+    <div class="bottom">
+      <img onclick="location.href='../juego1/juego1.html';" src="../images2/Piedra.PNG" alt="" />
+      <i onclick="location.href='#';" class="fas fa-money-bill-alt fa-2x"></i>
     </div>
-  </header>
+    <div class="bottom">
+      <i id="bot" class="fas fa-robot fa-2x"></i>
+      <p id="cpu">0</p>
+      <p>|</p>
+      <p id="user">0</p>
+      <i id="pers" class="fas fa-user-tie fa-2x"></i>
+    </div>
+    <div class="bottom">
+      <i id="myBtn" class="fas fa-info-circle fa-2x"></i>
 
-  <section>
-    <h2 class="section__title title-juego">Zona de juegos: piedra, papel, tijeras, lagarto y spock</h2>
-    <div class="juego__wrapper">
+      <i onclick="location.href='../index.html';" id="cog" class="fas fa-home fa-2x"></i>
+    </div>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
       <div class="juego__info">
         <!-- VIDEO -->
         <video class="juego__video" width="400" controls>
@@ -86,116 +62,53 @@
         </div>
 
       </div>
-      <div class="juego__funcionalidad">
-        <!-- JUEGO -->
+    </div>
+  </div>
 
-        <!-- START -->
-        <div class="juego__fun-wrapper">
-          <div class="juego__contador-wrapper">
-            <h2 id="resultado">Contador</h2>
-            <h2 id="situacion">Resultado</h2>
+  <section>
+    <div class="juego__wrapper">
+      <!-- JUEGO -->
+
+      <!-- START -->
+      <div class="juego__fun-wrapper">
+
+        <div class="juego__tablero-wrapper">
+          <div class="juego__tablero">
+            <div class="juego__eleccion-usuario">
+              <h3 class="juego__tablero-titulo">Usuario</h3>
+              <div class="juego__usuario" id="divUsuario">
+
+              </div>
+            </div>
+            <div class="juego__eleccion-usuario">
+              <h3 class="juego__tablero-titulo">Maquina</h3>
+              <div class="juego__maquina" id="divMaquina">
+
+              </div>
+            </div>
+
           </div>
-          <div class="juego__tablero-wrapper">
-            <div class="juego__tablero">
-              <div class="juego__eleccion-usuario">
-                <h3 class="juego__tablero-titulo">Tu eleccion</h3>
-                <div class="juego__usuario" id="divUsuario">
-
-                </div>
-              </div>
-              <div class="juego__eleccion-usuario">
-                <h3 class="juego__tablero-titulo">Su eleccion</h3>
-                <div class="juego__maquina" id="divMaquina">
-
-                </div>
-              </div>
-
+          <div class="juego__opciones">
+            <div class="juego__opcio-img">
+              <img class="juego__imagenes" id="lagarto" src="../images2/Lagarto.PNG" alt="">
+              <img class="juego__imagenes" id="papel" src="../images2/Papel.PNG" alt="">
+              <img class="juego__imagenes" id="piedra" src="../images2/Piedra.PNG" alt="">
+              <img class="juego__imagenes" id="spock" src="../images2/Spock.PNG" alt="">
+              <img class="juego__imagenes" id="tijera" src="../images2/Tijera.PNG" alt="">
             </div>
-            <div class="juego__opciones">
-              <div class="juego__opcio-img">
-                <img class="juego__imagenes" id="lagarto" src="../images2/Lagarto.PNG" alt="">
-                <img class="juego__imagenes" id="papel" src="../images2/Papel.PNG" alt="">
-                <img class="juego__imagenes" id="piedra" src="../images2/Piedra.PNG" alt="">
-                <img class="juego__imagenes" id="spock" src="../images2/Spock.PNG" alt="">
-                <img class="juego__imagenes" id="tijera" src="../images2/Tijera.PNG" alt="">
-              </div>
-              <div class="juegos__seleccion-botones">
-                <button class="juego__seleccionar boton" id="seleccion">Jugar</button>
-                <button class="juego__seleccionar-limpiar boton" id="limpiar">Limpiar seleccion</button>
-              </div>
-
+            <div class="juegos__seleccion-botones">
+              <button class="juego__seleccionar boton" id="seleccion">Jugar</button>
+              <button class="juego__seleccionar-limpiar boton" id="limpiar">Limpiar seleccion</button>
             </div>
+
           </div>
         </div>
-        <button class="juego__start boton" id="start">Start</button>
       </div>
+      <button class="juego__start boton" id="start">Start / Resetear</button>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-text">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="ft-logo">
-              <img src="../images/logo.png" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-3 offset-lg-1">
-            <div class="ft-contact">
-              <h1>Contact Us</h1>
 
-              <div class="contact-info">
-                <p>Manager: Antonio Santos Ramos</p>
-                <p>(12) 345 67890</p>
-                <p>
-                  <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__"
-                    data-cfemail="c7aea9a1a8e9a4a8aba8b5abaea587a0aaa6aeabe9a4a8aa">[email&#160;protected]</a>
-                </p>
-                <p>856 Cordia Extension Apt. 356, Lake, United State</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 offset-lg-1">
-            <div class="last-contact">
-              <div class="ft-newslatter">
-                <h1>New latest</h1>
-                <p>Get the latest updates and offers.</p>
-                <form action="#" class="fn-form">
-                  <input class="text" type="text" placeholder="Email" />
-
-                  <div class="send"><i class="fas fa-paper-plane"></i></div>
-                </form>
-              </div>
-
-              <div class="fa-social">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-twitch"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="copyright">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7">
-            <ul class="footer-list">
-              <li><a href="#">Contact</a></li>
-              <li>Terms of use</li>
-              <li>Privacy</li>
-              <li>Environmental Policy</li>
-            </ul>
-          </div>
-          <div class="col-lg-5"></div>
-        </div>
-      </div>
-    </div>
-  </footer>
   <script language="javascript" type="module" src="juego1.js"></script>
 
 </body>
