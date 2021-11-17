@@ -26,7 +26,7 @@ if (document.querySelector("#plant") == null) {
   document.querySelector("#plant").style.cursor = "pointer";
 }
 
- 
+
 
 let mazo = [];
 let palos = ["Corazones", "Treboles", "Diamantes", "Picas"];
@@ -47,7 +47,7 @@ let btn = document.getElementById("myBtn");
 let contenedor = document.querySelector(".contenedor");
 
 // When the user clicks on the button, open the modal
-function information () {
+function information() {
   modal.style.display = "flex";
   modal.style.transitionDelay = "2s";
   modal.style.alignContent = "center";
@@ -127,9 +127,9 @@ function generarMazo() {
             i,
             palos[j],
             "https://deckofcardsapi.com/static/img/" +
-              i +
-              palosLetra[j] +
-              ".png",
+            i +
+            palosLetra[j] +
+            ".png",
             i,
             "x "
           )
@@ -213,9 +213,9 @@ function cogerCarta() {
   if (puntajeUsuario > 21) {
     alert(
       "Fin de partida, puntuacion maquina: " +
-        puntajeMaquina +
-        " puntuacion usuario: " +
-        puntajeUsuario
+      puntajeMaquina +
+      " puntuacion usuario: " +
+      puntajeUsuario
     );
 
     victoriaDerrota("usuPerd");
@@ -231,9 +231,9 @@ function cogerCarta() {
   if (puntajeMaquina > 21) {
     alert(
       "Fin de partida, puntuacion maquina: " +
-        puntajeMaquina +
-        " puntuacion usuario: " +
-        puntajeUsuario
+      puntajeMaquina +
+      " puntuacion usuario: " +
+      puntajeUsuario
     );
 
     if (document.querySelector("#coger") == null) {
