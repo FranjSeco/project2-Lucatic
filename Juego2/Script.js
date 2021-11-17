@@ -177,22 +177,21 @@ function cogerCarta() {
   }
 
   // imprime imagen en pantalla
-  if (contador > 0) {
-    if (mazo[aleatorio].propietario == "jugador") {
-      if (document.getElementById("usuario") == null) {
-        console.log("ERROR");
-      } else {
-        document.getElementById("usuario").innerHTML +=
-          "<img src=" + mazo[aleatorio].imagen + ">";
-      }
+
+  if (mazo[aleatorio].propietario == "jugador") {
+    if (document.getElementById("usuario") == null) {
+      console.log("ERROR");
+    } else {
+      document.getElementById("usuario").innerHTML +=
+        "<img src=" + mazo[aleatorio].imagen + ">";
     }
-    if (mazo[aleatorio].propietario == "maquina") {
-      if (document.getElementById("img") == null) {
-        console.log("ERROR");
-      } else {
-        document.getElementById("img").innerHTML +=
-          "<img src=" + mazo[aleatorio].imagen + ">";
-      }
+  }
+  if (mazo[aleatorio].propietario == "maquina") {
+    if (document.getElementById("img") == null) {
+      console.log("ERROR");
+    } else {
+      document.getElementById("img").innerHTML +=
+        "<img src=" + mazo[aleatorio].imagen + ">";
     }
   }
 
