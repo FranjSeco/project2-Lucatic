@@ -61,19 +61,17 @@ let modal = document.getElementById("myModal");
 // Get the button that opens the modal
 let btn = document.getElementById("myBtn");
 
-let contenedor = document.querySelector(".contenedor");
+let content = document.querySelector(".modal-content");
 
 // When the user clicks on the button, open the modal
 function information() {
   modal.style.display = "flex";
-  modal.style.transitionDelay = "2s";
   modal.style.alignContent = "center";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
-    btn.style.display = "inline";
     modal.style.display = "none";
   }
 };
@@ -422,6 +420,14 @@ async function victoriaDerrota(vic) {
 }
 
 function finalizacionJuego(desenlace) {
+/*     modal.style.display = "flex";
+  modal.style.alignContent = "center";
+  content.innerHTML = "<h1>"ajsdnkasjndakds"<h1/><br>"
+  window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    location.reload();
+  } */
   alert(
     desenlace +
       " " +
@@ -432,9 +438,9 @@ function finalizacionJuego(desenlace) {
       " Dinero: " +
       window.localStorage.getItem("DineroApostado") +
       " rupias"
-  );
-
-  location.reload();
+  ); 
+location.reload();
+  
 }
 
 module.exports = {
