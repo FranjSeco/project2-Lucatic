@@ -8,10 +8,25 @@ class Carta {
   }
 }
 
-// document.querySelector("#uno").disabled = true;
-document.querySelector("#once").disabled = true;
-document.querySelector("#coger").style.cursor = "pointer";
-document.querySelector("#plant").style.cursor = "pointer";
+if (document.querySelector("#once") == null) {
+  console.log("ERROR");
+} else {
+  document.querySelector("#once").disabled = true;
+}
+
+if (document.querySelector("#coger") == null) {
+  console.log("ERROR");
+} else {
+  document.querySelector("#coger").style.cursor = "pointer";
+}
+
+if (document.querySelector("#plant") == null) {
+  console.log("ERROR");
+} else {
+  document.querySelector("#plant").style.cursor = "pointer";
+}
+
+ 
 
 let mazo = [];
 let palos = ["Corazones", "Treboles", "Diamantes", "Picas"];
@@ -32,7 +47,7 @@ let btn = document.getElementById("myBtn");
 let contenedor = document.querySelector(".contenedor");
 
 // When the user clicks on the button, open the modal
-btn.onclick = function () {
+function information () {
   modal.style.display = "flex";
   modal.style.transitionDelay = "2s";
   modal.style.alignContent = "center";
