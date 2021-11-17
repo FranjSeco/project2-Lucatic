@@ -1,345 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>L'Equip</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/headerFooter.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>L'Equip</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <link rel="stylesheet" href="styles/headerFooter.css" />
+    <link rel="stylesheet" href="styles/contacta.css" />
 
-  <link rel="stylesheet" href="styles/contacta.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
-  <link rel="stylesheet" href="./styles/main.css" />
-</head>
-
-<body>
-  <header>
-    <div class="container">
-      <div class="row">
-        <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid navbar">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-              aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="fas fa-hamburger"></i>
-            </button>
-            <img id="logoNav" src="images/logoNav.png" alt="" />
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-              <ul class="navbar-nav mb-2 mb-lg-0">
-                <li><a class="nav-link" href="index-EN.html">Home</a></li>
-                <li><a class="nav-link" href="equipo1-EN.html">Team</a></li>
-                <li><a class="nav-link" href="partidos-EN.html">Matches</a></li>
-                <li><a class="nav-link" href="noticias-EN.html">News</a></li>
-                <li>
-                  <a class="nav-link" href="contacta-EN.html" id="ultimaOpcion">Contact</a>
-                </li>
-                <li>
-                  <a class="nav-link" href="./juego1/juego1-EN.html">Game1</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Language
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">English</a></li>
-                    <li>
-                      <a class="dropdown-item" href="./index.html">Spanish</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </header>
-  <div class="foto-container">
-    <img src="./images/headerImage.jpg" alt="" />
-  </div>
-
-  <section class="about">
-    <h2 class="section__title">What do we do</h2>
-    <div class="about__wrapper">
-      <div class="about__info">
-        <p class="about__text">
-          Short story, we focus on winning. Long story, we are a E-games team that compete in the Valorant international
-          scene.
-        </p>
-        <p class="about__text">
-          Currently we are busy looking for a new team member since our archienemy Valdemir aka Vlademir aka thE_ToxiC
-          left us.
-        </p>
-        <p class="about__text">
-          We are a very commited group of progammers that is going to change the scene for ever. Stay tunned and sit
-          tight. Everybody is going to be talking about us for a long time.
-        </p>
-        <button class="section__btn readMore__btn">Read More</button>
-      </div>
-      <div class="about__image-wrapper"></div>
-    </div>
-  </section>
-  <section class="whatWeDo">
-    <h2 class="section__title">About the team</h2>
-    <div class="whatWeDo__title-wrapper">
-      <div class="whatWeDo__grid-wrapper">
-        <div class="whatWeDo__card">
-          <h3 class="whatWeDo__card-title">Tactics</h3>
-          <p class="whatWeDo__card-text">
-            Tactics are our bible. Life is tactics and tactics is our life
-          </p>
-        </div>
-        <div class="whatWeDo__card">
-          <h3 class="whatWeDo__card-title">Teamplay</h3>
-          <p class="whatWeDo__card-text">
-            We are a team, we play as a team and we live as a team.
-          </p>
-        </div>
-        <div class="whatWeDo__card">
-          <h3 class="whatWeDo__card-title">Trainings</h3>
-          <p class="whatWeDo__card-text">
-            We don't really train that much. We don't need it.
-          </p>
-        </div>
-        <div class="whatWeDo__card">
-          <h3 class="whatWeDo__card-title">Tournaments</h3>
-          <p class="whatWeDo__card-text">
-            It would be easier if they just handle us the prices automatically. The tournaments are just a protocol.
-          </p>
-        </div>
-        <div class="whatWeDo__card">
-          <h3 class="whatWeDo__card-title">Requirement</h3>
-          <p class="whatWeDo__card-text">
-            We don't need to do much, we are just better.
-          </p>
-        </div>
-        <div class="whatWeDo__card">
-          <h3 class="whatWeDo__card-title">Team House</h3>
-          <p class="whatWeDo__card-text">
-            We have a house for each member of the team. These houses are all together within the same condo. We have
-            everything we can think of.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="equipo">
-    <h2 class="section__title">The team</h2>
-    <div class="equipo__wrapper">
-      <div class="equipo__card">
-        <div class="equipo__card-anim">
-          <h3 class="equipo__anim-title">GUILLERMO</h3>
-          <p class="equipo__anim-price">
-            <span class="equipo__anim-price_span">aka</span> Guillermo
-          </p>
-          <p class="equipo__anim-text">
-            The Carry <br />
-            Weapon: Phantom<br />
-            Map: Ice Box<br />
-            Propietary<br />
-          </p>
-        </div>
-      </div>
-      <div class="equipo__card">
-        <div class="equipo__card-anim">
-          <h3 class="equipo__anim-title">NOEMI</h3>
-          <p class="equipo__anim-price">
-            <span class="equipo__anim-price_span">aka</span> NOEMI
-          </p>
-          <p class="equipo__anim-text">
-            The Support <br />
-            Weapon: Operator<br />
-            Map: Fracture<br />
-            Propietary<br />
-          </p>
-        </div>
-      </div>
-      <div class="equipo__card">
-        <div class="equipo__card-anim">
-          <h3 class="equipo__anim-title">DANI</h3>
-          <p class="equipo__anim-price">
-            <span class="equipo__anim-price_span">aka</span> DANI
-          </p>
-          <p class="equipo__anim-text">
-            The Utility guy<br />
-            Weapon: Vandal<br />
-            Map: Split<br />
-            Propietary<br />
-          </p>
-        </div>
-      </div>
-      <div class="equipo__card">
-        <div class="equipo__card-anim">
-          <h3 class="equipo__anim-title">FRAN</h3>
-          <p class="equipo__anim-price">
-            <span class="equipo__anim-price_span">aka</span> FRAN
-          </p>
-          <p class="equipo__anim-text">
-            The Noob <br />
-            Weapon: Sheriff<br />
-            Map: Ascent<br />
-            Propietary<br />
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="news">
-    <h2 class="section__title">Pictures and Events</h2>
-    <div class="news__grid-wrapper">
-      <div class="news__image1">
-        <div class="news__info">
-          <p class="news__info-text">Picture</p>
-          <h3 class="news__info-title">A fan</h3>
-          <p class="news__info-date">15TH APRIL, 2016</p>
-        </div>
-      </div>
-      <div class="news__image2">
-        <div class="news__info">
-          <p class="news__info-text">Kun</p>
-          <h3 class="news__info-title">Also a fan</h3>
-          <p class="news__info-date">25TH May, 2019</p>
-        </div>
-      </div>
-      <div class="news__image3">
-        <div class="news__info">
-          <p class="news__info-text">Friend Squad</p>
-          <h3 class="news__info-title">Team´s picture</h3>
-          <p class="news__info-date">15TH APRIL, 2019</p>
-        </div>
-      </div>
-      <div class="news__image4">
-        <div class="news__info">
-          <p class="news__info-text">Friend Squad</p>
-          <h3 class="news__info-title">Team´s picture</h3>
-          <p class="news__info-date">5TH APRIL, 2019</p>
-        </div>
-      </div>
-      <div class="news__image5">
-        <div class="news__info">
-          <p class="news__info-text">Lower divisions</p>
-          <h3 class="news__info-title">The future of our team</h3>
-          <p class="news__info-date">15TH August, 2021</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="carousel__wrapper">
-    <h2 class="section__title">Moments</h2>
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-          aria-current="true" aria-label="Slide 1"></button><button type="button"
-          data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button><button
-          type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="../images/momentos1.jpeg" class="bootsrap__image d-block w-100" alt="Foto equipo torneo" />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Team´s picture</h5>
-            <p>Winning again.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="../images/momentos2.jpg" class="bootsrap__image d-block w-100" alt="Foto equipo torneo" />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Team´s picture</h5>
-            <p>Winning more. Borinnggg.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="../images/momentos3.jpg" class="bootsrap__image d-block w-100" alt="Foto equipo torneo" />
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Team´s picture</h5>
-            <p>Here we lost, oh wait..No we didn't</p>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-text">
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="ft-logo">
-              <img src="images/logo.png" alt="" />
-            </div>
-          </div>
-          <div class="col-lg-3 offset-lg-1">
-            <div class="ft-contact">
-              <h1>Contact Us</h1>
-
-              <div class="contact-info">
-                <p>Manager: Antonio Santos Ramos</p>
-                <p>(12) 345 67890</p>
-                <p>
-                  <a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__"
-                    data-cfemail="c7aea9a1a8e9a4a8aba8b5abaea587a0aaa6aeabe9a4a8aa">[email&#160;protected]</a>
-                </p>
-                <p>856 Cordia Extension Apt. 356, Lake, United State</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 offset-lg-1">
-            <div class="last-contact">
-              <div class="ft-newslatter">
-                <h1>New latest</h1>
-                <p>Get the latest updates and offers.</p>
-                <form action="#" class="fn-form">
-                  <input class="text" type="text" placeholder="Email" />
-
-                  <div class="send"><i class="fas fa-paper-plane"></i></div>
-                </form>
-              </div>
-
-              <div class="fa-social">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-twitch"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="copyright">
+  <body>
+    <header>
       <div class="container">
         <div class="row">
-          <div class="col-lg-7">
-            <ul class="footer-list">
-              <li><a href="#">Contact</a></li>
-              <li>Terms of use</li>
-              <li>Privacy</li>
-              <li>Environmental Policy</li>
-            </ul>
-          </div>
-          <div class="col-lg-5"></div>
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid navbar">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="fas fa-hamburger"></i>
+              </button>
+              <img id="logoNav" src="images/logoNav.png" alt="" />
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                  <li><a class="nav-link" href="index-EN.html">Home</a></li>
+                  <li><a class="nav-link" href="equipo1-EN.html">Team</a></li>
+                  <li>
+                    <a class="nav-link" href="partidos-EN.html">Matches</a>
+                  </li>
+                  <li><a class="nav-link" href="noticias-EN.html">News</a></li>
+                  <li>
+                    <a
+                      class="nav-link"
+                      href="contacta-EN.html"
+                      id="ultimaOpcion"
+                      >Contact</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Games
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li>
+                        <a class="dropdown-item" href="juego1/juego1.html"
+                          >Rock, paper, scissors</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="Juego2/index.html"
+                          >Blackjack</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Language
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">English</a></li>
+                      <li>
+                        <a class="dropdown-item" href="./index.html">Spanish</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </div>
       </div>
+    </header>
+    <div class="foto-container">
+      <img src="./images/headerImage.jpg" alt="" />
     </div>
-  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-</body>
+    <section class="about">
+      <h2 class="section__title">What do we do</h2>
+      <div class="about__wrapper">
+        <div class="about__info">
+          <p class="about__text">
+            Short story, we focus on winning. Long story, we are a E-games team
+            that compete in the Valorant international scene.
+          </p>
+          <p class="about__text">
+            Currently we are busy looking for a new team member since our
+            archienemy Valdemir aka Vlademir aka thE_ToxiC left us.
+          </p>
+          <p class="about__text">
+            We are a very commited group of progammers that is going to change
+            the scene for ever. Stay tunned and sit tight. Everybody is going to
+            be talking about us for a long time.
+          </p>
+          <button class="section__btn readMore__btn">Read More</button>
+        </div>
+        <div class="about__image-wrapper"></div>
+      </div>
+    </section>
+    <section class="whatWeDo">
+      <h2 class="section__title">About the team</h2>
+      <div class="whatWeDo__title-wrapper">
+        <div class="whatWeDo__grid-wrapper">
+          <div class="whatWeDo__card">
+            <h3 class="whatWeDo__card-title">Tactics</h3>
+            <p class="whatWeDo__card-text">
+              Tactics are our bible. Life is tactics and tactics is our life
+            </p>
+          </div>
+          <div class="whatWeDo__card">
+            <h3 class="whatWeDo__card-title">Teamplay</h3>
+            <p class="whatWeDo__card-text">
+              We are a team, we play as a team and we live as a team.
+            </p>
+          </div>
+          <div class="whatWeDo__card">
+            <h3 class="whatWeDo__card-title">Trainings</h3>
+            <p class="whatWeDo__card-text">
+              We don't really train that much. We don't need it.
+            </p>
+          </div>
+          <div class="whatWeDo__card">
+            <h3 class="whatWeDo__card-title">Tournaments</h3>
+            <p class="whatWeDo__card-text">
+              It would be easier if they just handle us the prices
+              automatically. The tournaments are just a protocol.
+            </p>
+          </div>
+          <div class="whatWeDo__card">
+            <h3 class="whatWeDo__card-title">Requirement</h3>
+            <p class="whatWeDo__card-text">
+              We don't need to do much, we are just better.
+            </p>
+          </div>
+          <div class="whatWeDo__card">
+            <h3 class="whatWeDo__card-title">Team House</h3>
+            <p class="whatWeDo__card-text">
+              We have a house for each member of the team. These houses are all
+              together within the same condo. We have everything we can think
+              of.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="equipo">
+      <h2 class="section__title">The team</h2>
+      <div class="equipo__wrapper">
+        <div class="equipo__card">
+          <div class="equipo__card-anim">
+            <h3 class="equipo__anim-title">GUILLERMO</h3>
+            <p class="equipo__anim-price">
+              <span class="equipo__anim-price_span">aka</span> Guillermo
+            </p>
+            <p class="equipo__anim-text">
+              The Carry <br />
+              Weapon: Phantom<br />
+              Map: Ice Box<br />
+              Propietary<br />
+            </p>
+          </div>
+        </div>
+        <div class="equipo__card">
+          <div class="equipo__card-anim">
+            <h3 class="equipo__anim-title">NOEMI</h3>
+            <p class="equipo__anim-price">
+              <span class="equipo__anim-price_span">aka</span> NOEMI
+            </p>
+            <p class="equipo__anim-text">
+              The Support <br />
+              Weapon: Operator<br />
+              Map: Fracture<br />
+              Propietary<br />
+            </p>
+          </div>
+        </div>
+        <div class="equipo__card">
+          <div class="equipo__card-anim">
+            <h3 class="equipo__anim-title">DANI</h3>
+            <p class="equipo__anim-price">
+              <span class="equipo__anim-price_span">aka</span> DANI
+            </p>
+            <p class="equipo__anim-text">
+              The Utility guy<br />
+              Weapon: Vandal<br />
+              Map: Split<br />
+              Propietary<br />
+            </p>
+          </div>
+        </div>
+        <div class="equipo__card">
+          <div class="equipo__card-anim">
+            <h3 class="equipo__anim-title">FRAN</h3>
+            <p class="equipo__anim-price">
+              <span class="equipo__anim-price_span">aka</span> FRAN
+            </p>
+            <p class="equipo__anim-text">
+              The Noob <br />
+              Weapon: Sheriff<br />
+              Map: Ascent<br />
+              Propietary<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="news">
+      <h2 class="section__title">Pictures and Events</h2>
+      <div class="news__grid-wrapper">
+        <div class="news__image1">
+          <div class="news__info">
+            <p class="news__info-text">Picture</p>
+            <h3 class="news__info-title">A fan</h3>
+            <p class="news__info-date">15TH APRIL, 2016</p>
+          </div>
+        </div>
+        <div class="news__image2">
+          <div class="news__info">
+            <p class="news__info-text">Kun</p>
+            <h3 class="news__info-title">Also a fan</h3>
+            <p class="news__info-date">25TH May, 2019</p>
+          </div>
+        </div>
+        <div class="news__image3">
+          <div class="news__info">
+            <p class="news__info-text">Friend Squad</p>
+            <h3 class="news__info-title">Team´s picture</h3>
+            <p class="news__info-date">15TH APRIL, 2019</p>
+          </div>
+        </div>
+        <div class="news__image4">
+          <div class="news__info">
+            <p class="news__info-text">Friend Squad</p>
+            <h3 class="news__info-title">Team´s picture</h3>
+            <p class="news__info-date">5TH APRIL, 2019</p>
+          </div>
+        </div>
+        <div class="news__image5">
+          <div class="news__info">
+            <p class="news__info-text">Lower divisions</p>
+            <h3 class="news__info-title">The future of our team</h3>
+            <p class="news__info-date">15TH August, 2021</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="carousel__wrapper">
+      <h2 class="section__title">Moments</h2>
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button
+          ><button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button
+          ><button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="../images/momentos1.jpeg"
+              class="bootsrap__image d-block w-100"
+              alt="Foto equipo torneo"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Team´s picture</h5>
+              <p>Winning again.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../images/momentos2.jpg"
+              class="bootsrap__image d-block w-100"
+              alt="Foto equipo torneo"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Team´s picture</h5>
+              <p>Winning more. Borinnggg.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../images/momentos3.jpg"
+              class="bootsrap__image d-block w-100"
+              alt="Foto equipo torneo"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Team´s picture</h5>
+              <p>Here we lost, oh wait..No we didn't</p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span
+          ><span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span
+          ><span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-text">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="ft-logo">
+                <img src="images/logo.png" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-3 offset-lg-1">
+              <div class="ft-contact">
+                <h1>Contact Us</h1>
+
+                <div class="contact-info">
+                  <p>Manager: Antonio Santos Ramos</p>
+                  <p>(12) 345 67890</p>
+                  <p>
+                    <a
+                      href="https://preview.colorlib.com/cdn-cgi/l/email-protection"
+                      class="__cf_email__"
+                      data-cfemail="c7aea9a1a8e9a4a8aba8b5abaea587a0aaa6aeabe9a4a8aa"
+                      >[email&#160;protected]</a
+                    >
+                  </p>
+                  <p>856 Cordia Extension Apt. 356, Lake, United State</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 offset-lg-1">
+              <div class="last-contact">
+                <div class="ft-newslatter">
+                  <h1>New latest</h1>
+                  <p>Get the latest updates and offers.</p>
+                  <form action="#" class="fn-form">
+                    <input class="text" type="text" placeholder="Email" />
+
+                    <div class="send"><i class="fas fa-paper-plane"></i></div>
+                  </form>
+                </div>
+
+                <div class="fa-social">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-twitch"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                  <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <ul class="footer-list">
+                <li><a href="#">Contact</a></li>
+                <li>Terms of use</li>
+                <li>Privacy</li>
+                <li>Environmental Policy</li>
+              </ul>
+            </div>
+            <div class="col-lg-5"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

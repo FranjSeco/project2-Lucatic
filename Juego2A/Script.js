@@ -26,6 +26,8 @@ if (document.querySelector("#plant") == null) {
   document.querySelector("#plant").style.cursor = "pointer";
 }
 
+
+
 let mazo = [];
 let palos = ["Corazones", "Treboles", "Diamantes", "Picas"];
 let palosLetra = ["H", "C", "D", "S"];
@@ -36,9 +38,7 @@ let mano = [];
 let contador = 0;
 var turno = "jugador";
 let aleatorio;
-let dineroApostado = parseFloat(
-  prompt("Introduce la cantidad de dinero a apostar en esta partida:")
-);
+let dineroApostado = parseFloat(prompt("Introduce la cantidad de dinero a apostar en esta partida:"));
 
 let modal = document.getElementById("myModal");
 
@@ -52,28 +52,6 @@ function information() {
   modal.style.display = "flex";
   modal.style.transitionDelay = "2s";
   modal.style.alignContent = "center";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    btn.style.display = "inline";
-    modal.style.display = "none";
-  }
-};
-
-let modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-let btn = document.getElementById("myBtn");
-
-let contenedor = document.querySelector(".contenedor");
-
-// When the user clicks on the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "flex";
-  modal.style.transitionDelay = "2s";
-  modal.style.alignContent = "center";
 };
 
 // When the user clicks anywhere outside of the modal, close it
@@ -83,6 +61,8 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+
 
 ///SE GENERA EL MAZO
 
@@ -150,9 +130,9 @@ function generarMazo() {
             i,
             palos[j],
             "https://deckofcardsapi.com/static/img/" +
-              i +
-              palosLetra[j] +
-              ".png",
+            i +
+            palosLetra[j] +
+            ".png",
             i,
             "x "
           )
@@ -190,14 +170,17 @@ function cogerCarta() {
   ) {
     if (document.getElementById("once") == null) {
       console.log("ERROR");
-    } else {
+    }
+    else {
       document.getElementById("once").disabled = false;
     }
     if (document.getElementById("once") == null) {
       console.log("ERROR");
-    } else {
+    }
+    else {
       document.getElementById("once").style.cursor = "pointer";
     }
+
   }
 
   if (
@@ -240,6 +223,8 @@ function cogerCarta() {
   }
 
   if (puntajeUsuario > 21) {
+
+
     victoriaDerrota("usuPerd");
 
     // Output the final value.
@@ -251,6 +236,7 @@ function cogerCarta() {
   }
 
   if (puntajeMaquina > 21) {
+
     victoriaDerrota("usuGan");
 
     if (document.querySelector("#coger") == null) {
@@ -258,11 +244,13 @@ function cogerCarta() {
     } else {
       document.querySelector("#coger").disabled = true;
     }
+
     if (document.querySelector("#plant") == null) {
       console.log("ERROR");
     } else {
       document.querySelector("#plant").disabled = true;
     }
+
   }
 
   contador++;
@@ -321,6 +309,8 @@ function plantarse() {
 
   while (puntajeMaquina < puntajeUsuario && puntajeUsuario < 22) {
     cogerCarta();
+
+
   }
   if (
     (puntajeMaquina > puntajeUsuario && puntajeMaquina < 22) ||
@@ -355,15 +345,12 @@ async function victoriaDerrota(vic) {
       }
       //apuesta
       if ((await window.localStorage.getItem("DineroApostado")) == undefined) {
+        await window.localStorage.setItem("DineroApostado", 1000 - dineroApostado);
+      }
+      else {
         await window.localStorage.setItem(
           "DineroApostado",
-          1000 - dineroApostado
-        );
-      } else {
-        await window.localStorage.setItem(
-          "DineroApostado",
-          parseFloat(window.localStorage.getItem("DineroApostado")) -
-            dineroApostado
+          parseFloat(window.localStorage.getItem("DineroApostado")) - dineroApostado
         );
       }
     } catch (e) {
@@ -385,16 +372,13 @@ async function victoriaDerrota(vic) {
       //apuesta
       console.log(window.localStorage.getItem("DineroApostado") + "Antes");
       if ((await window.localStorage.getItem("DineroApostado")) == undefined) {
-        await window.localStorage.setItem(
-          "DineroApostado",
-          1000 + dineroApostado
-        );
+        await window.localStorage.setItem("DineroApostado", 1000 + dineroApostado);
         console.log(window.localStorage.getItem("DineroApostado") + "null");
-      } else {
+      }
+      else {
         await window.localStorage.setItem(
           "DineroApostado",
-          parseFloat(window.localStorage.getItem("DineroApostado")) +
-            dineroApostado
+          parseFloat(window.localStorage.getItem("DineroApostado")) + dineroApostado
         );
         console.log(window.localStorage.getItem("DineroApostado") + "normal");
       }
@@ -420,15 +404,15 @@ async function victoriaDerrota(vic) {
   }
 
   alert(
-    desenlace +
-      " " +
-      "Fin de partida, puntuacion maquina: " +
-      puntajeMaquina +
-      " puntuacion usuario: " +
-      puntajeUsuario +
-      " Dinero: " +
-      window.localStorage.getItem("DineroApostado") +
-      " rupias"
+    desenlace + " " +
+    "Fin de partida, puntuacion maquina: " +
+    puntajeMaquina +
+    " puntuacion usuario: " +
+    puntajeUsuario +
+    " Dinero: " +
+    window.localStorage.getItem("DineroApostado") +
+    " rupias"
+
   );
 
   console.log(window.localStorage.getItem("DineroApostado") + "Euros");
