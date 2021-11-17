@@ -8,6 +8,22 @@ class Carta {
   }
 }
 
+
+//cargar victorias y derrotas
+if (document.querySelector("#user") == null) {
+  console.log("ERROR");
+} else {
+  document.querySelector("#user").innerHTML = window.localStorage.getItem("victoria");
+}
+if (document.querySelector("#cpu") == null) {
+  console.log("ERROR");
+} else {
+  document.querySelector("#cpu").innerHTML = window.localStorage.getItem("derrota");
+}
+
+
+
+
 if (document.querySelector("#once") == null) {
   console.log("ERROR");
 } else {
@@ -237,7 +253,8 @@ function cogerCarta() {
 
   if (puntajeMaquina > 21) {
 
-    victoriaDerrota("usuGan");
+
+    //victoriaDerrota("usuGan");
 
     if (document.querySelector("#coger") == null) {
       console.log("ERROR");
@@ -255,7 +272,7 @@ function cogerCarta() {
 
   contador++;
 
-  if (puntajeUsuario == 21 && turno == "jugador") {
+  if (puntajeUsuario == 21 && turno == "jugador" ) {
     plantarse();
   }
 
@@ -324,6 +341,7 @@ function plantarse() {
   if (puntajeUsuario == 21 && puntajeMaquina == 21) {
     victoriaDerrota("empate");
   }
+  finalizacionJuego(desenlace);
 }
 
 //////////////////   VICTORIADERROTA
@@ -403,6 +421,17 @@ async function victoriaDerrota(vic) {
     }
   }
 
+
+  console.log(window.localStorage.getItem("DineroApostado") + "Euros");
+  console.log(window.localStorage.getItem("derrota") + "derrota");
+  console.log(window.localStorage.getItem("victoria") + "victoria");
+  finalizacionJuego(desenlace);
+  
+}
+
+
+function finalizacionJuego(desenlace){
+
   alert(
     desenlace + " " +
     "Fin de partida, puntuacion maquina: " +
@@ -413,12 +442,13 @@ async function victoriaDerrota(vic) {
     window.localStorage.getItem("DineroApostado") +
     " rupias"
 
-  );
+  )
+  
+  location.reload();
+  
 
-  console.log(window.localStorage.getItem("DineroApostado") + "Euros");
-  console.log(window.localStorage.getItem("derrota") + "derrota");
-  console.log(window.localStorage.getItem("victoria") + "victoria");
 }
+
 
 module.exports = {
   contador,
