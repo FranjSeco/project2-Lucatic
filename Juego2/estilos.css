@@ -121,6 +121,12 @@ body {
   margin-bottom: 40px;
 }
 
+
+#game #cpu {   margin-bottom: 10px; }  #game #user {   margin-top: 20px; }  #game #pers {   margin-bottom: 40px; }
+
+
+#game #bot:hover, #game #pers:hover {   color: #bfbfbf;   cursor: default; }
+
 #img img,
 #usuario img {
   height: 208.4px;

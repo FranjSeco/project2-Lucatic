@@ -38,6 +38,7 @@ let mano = [];
 let contador = 0;
 var turno = "jugador";
 let aleatorio;
+let dineroApostado=parseFloat( prompt("Introduce la cantidad de dinero a apostar en esta partida:"));
 
 let modal = document.getElementById("myModal");
 
@@ -60,6 +61,8 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+
 
 ///SE GENERA EL MAZO
 
@@ -165,10 +168,19 @@ function cogerCarta() {
     (aleatorio == 0 || aleatorio == 13 || aleatorio == 26 || aleatorio == 39) &&
     mazo[aleatorio].propietario == "jugador"
   ) {
-    // document.getElementById("uno").disabled = false;
-    document.getElementById("once").disabled = false;
-    // document.getElementById("uno").style.cursor = "pointer";
-    document.getElementById("once").style.cursor = "pointer";
+    if(document.getElementById("once")==null){
+      console.log("ERROR");
+    }
+    else{
+      document.getElementById("once").disabled = false;
+    }
+    if (document.getElementById("once")==null){
+      console.log("ERROR");
+    }
+    else{
+      document.getElementById("once").style.cursor = "pointer";
+    }
+    
   }
 
   if (
@@ -211,12 +223,7 @@ function cogerCarta() {
   }
 
   if (puntajeUsuario > 21) {
-    alert(
-      "Fin de partida, puntuacion maquina: " +
-        puntajeMaquina +
-        " puntuacion usuario: " +
-        puntajeUsuario
-    );
+   
 
     victoriaDerrota("usuPerd");
 
@@ -229,23 +236,22 @@ function cogerCarta() {
   }
 
   if (puntajeMaquina > 21) {
-    alert(
-      "Fin de partida, puntuacion maquina: " +
-        puntajeMaquina +
-        " puntuacion usuario: " +
-        puntajeUsuario
-    );
+   
+
+    victoriaDerrota("usuGan");
 
     if (document.querySelector("#coger") == null) {
       console.log("ERROR");
     } else {
       document.querySelector("#coger").disabled = true;
     }
+
     if (document.querySelector("#plant") == null) {
       console.log("ERROR");
     } else {
       document.querySelector("#plant").disabled = true;
     }
+
   }
 
   contador++;
@@ -305,7 +311,7 @@ function plantarse() {
   while (puntajeMaquina < puntajeUsuario && puntajeUsuario < 22) {
     cogerCarta();
 
-    console.log("estoy dentro del while");
+    
   }
   if (
     (puntajeMaquina > puntajeUsuario && puntajeMaquina < 22) ||
@@ -317,14 +323,16 @@ function plantarse() {
   }
 
   if (puntajeUsuario == 21 && puntajeMaquina == 21) {
-    ///////////////////////////////////
+    victoriaDerrota("empate");
   }
 }
 
 //////////////////   VICTORIADERROTA
 
 async function victoriaDerrota(vic) {
+  let desenlace="Victoria";
   if (vic == "usuPerd") {
+   desenlace="Derrota";
     try {
       if ((await window.localStorage.getItem("derrota")) == undefined) {
         await window.localStorage.setItem("derrota", 1);
@@ -336,6 +344,16 @@ async function victoriaDerrota(vic) {
         document.querySelector("#cpu").innerHTML =
           await window.localStorage.getItem("derrota");
       }
+      //apuesta
+      if((await window.localStorage.getItem("DineroApostado"))== undefined ){
+        await window.localStorage.setItem("DineroApostado", 1000  - dineroApostado);
+      }
+      else {
+        await window.localStorage.setItem(
+          "DineroApostado",
+          parseFloat(window.localStorage.getItem("DineroApostado")) - dineroApostado
+        );
+      }         
     } catch (e) {
       console.log("Error!", e);
     }
@@ -352,12 +370,26 @@ async function victoriaDerrota(vic) {
         document.querySelector("#user").innerHTML =
           await window.localStorage.getItem("victoria");
       }
+       //apuesta
+       console.log(window.localStorage.getItem("DineroApostado")+"Antes");
+       if((await window.localStorage.getItem("DineroApostado"))== undefined ){
+        await window.localStorage.setItem("DineroApostado", 1000  + dineroApostado);
+        console.log(window.localStorage.getItem("DineroApostado")+"null");
+      }
+      else {
+        await window.localStorage.setItem(
+          "DineroApostado",
+          parseFloat(window.localStorage.getItem("DineroApostado")) + dineroApostado
+        );
+        console.log(window.localStorage.getItem("DineroApostado")+"normal");
+      }  
     } catch (e) {
       console.log("Error!", e);
     }
   }
 
   if (vic == "empate") {
+    desenlace="Empate";
     try {
       if ((await window.localStorage.getItem("empate")) == undefined) {
         await window.localStorage.setItem("empate", 1);
@@ -372,6 +404,19 @@ async function victoriaDerrota(vic) {
     }
   }
 
+  alert(
+    desenlace+" "+
+    "Fin de partida, puntuacion maquina: " +
+      puntajeMaquina +
+      " puntuacion usuario: " +
+      puntajeUsuario  +
+      " Dinero: "      +
+      window.localStorage.getItem("DineroApostado")+
+      " rupias"
+     
+  );
+
+  console.log(window.localStorage.getItem("DineroApostado") + "Euros");
   console.log(window.localStorage.getItem("derrota") + "derrota");
   console.log(window.localStorage.getItem("victoria") + "victoria");
 }
