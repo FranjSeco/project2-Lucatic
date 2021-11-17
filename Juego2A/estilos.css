@@ -33,7 +33,6 @@ body {
   color: white;
   font-size: large;
   width: 175px;
-
   border: none;
 }
 
@@ -54,6 +53,34 @@ body {
 }
 .botones .cosas button:last-child {
   margin-top: 30px;
+}
+
+#coger:hover,
+#plant:hover {
+  background: #410101;
+
+  transition: 0.3s;
+}
+
+#alertBox {
+  position: absolute;
+  top: 100px;
+  margin-left: auto;
+  border: solid 1px black;
+  background-color: #528ce0;
+  padding: 50px;
+  visibility: hidden;
+}
+#alertClose {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: black;
+  border: solid 1px white;
+  color: white;
+  width: 1em;
+  text-align: center;
+  cursor: pointer;
 }
 
 .flex {

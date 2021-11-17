@@ -8,8 +8,10 @@ class Carta {
   }
 }
 
+
+
 //cargar victorias y derrotas
-if (document.querySelector("#user") == null) {
+if (document.querySelector("#user") == null) {++
   console.log("ERROR");
 } else {
   document.querySelector("#user").innerHTML =
@@ -184,12 +186,11 @@ function cogerCarta() {
       console.log("ERROR");
     } else {
       document.getElementById("once").disabled = false;
-    }
-    if (document.getElementById("once") == null) {
-      console.log("ERROR");
-    } else {
       document.getElementById("once").style.cursor = "pointer";
+      document.getElementById("once").style.background = "#a72122";
+      document.getElementById("once").style.transition = "0.5s"
     }
+
   }
 
   if (
@@ -220,6 +221,7 @@ function cogerCarta() {
     } else {
       document.getElementById("usuario").innerHTML +=
         "<img src=" + mazo[aleatorio].imagen + ">";
+       
     }
   }
   if (mazo[aleatorio].propietario == "maquina") {
