@@ -420,15 +420,16 @@ async function victoriaDerrota(vic) {
 }
 
 function finalizacionJuego(desenlace) {
-/*     modal.style.display = "flex";
+    modal.style.display = "flex";
   modal.style.alignContent = "center";
-  content.innerHTML = "<h1>"ajsdnkasjndakds"<h1/><br>"
+  
+  content.innerHTML = "<h1>"+ desenlace + "<h1/><br><h3>Fin de la partida, puntuacion maquina: <h3/><br>"+ puntajeMaquina
   window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
     location.reload();
-  } */
-  alert(
+  }
+/*   alert(
     desenlace +
       " " +
       "Fin de partida, puntuacion maquina: " +
@@ -439,8 +440,8 @@ function finalizacionJuego(desenlace) {
       window.localStorage.getItem("DineroApostado") +
       " rupias"
   ); 
-location.reload();
-  
+location.reload(); */
+}
 }
 
 module.exports = {
