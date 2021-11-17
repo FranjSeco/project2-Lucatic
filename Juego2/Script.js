@@ -8,8 +8,10 @@ class Carta {
   }
 }
 
-document.querySelector("#uno").disabled = true;
+// document.querySelector("#uno").disabled = true;
 document.querySelector("#once").disabled = true;
+document.querySelector("#coger").style.cursor = "pointer";
+document.querySelector("#plant").style.cursor = "pointer";
 
 let mazo = [];
 let palos = ["Corazones", "Treboles", "Diamantes", "Picas"];
@@ -22,6 +24,28 @@ let mano = [];
 let contador = 0;
 var turno = "jugador";
 let aleatorio;
+
+let modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+let btn = document.getElementById("myBtn");
+
+let contenedor = document.querySelector(".contenedor");
+
+// When the user clicks on the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "flex";
+  modal.style.transitionDelay = "2s";
+  modal.style.alignContent = "center";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    btn.style.display = "inline";
+    modal.style.display = "none";
+  }
+};
 
 ///SE GENERA EL MAZO
 for (let j = 0; j < palos.length; j++) {
@@ -119,8 +143,10 @@ async function cogerCarta() {
     (aleatorio == 0 || aleatorio == 13 || aleatorio == 26 || aleatorio == 39) &&
     mazo[aleatorio].propietario == "jugador"
   ) {
-    document.getElementById("uno").disabled = false;
+    // document.getElementById("uno").disabled = false;
     document.getElementById("once").disabled = false;
+    // document.getElementById("uno").style.cursor = "pointer";
+    document.getElementById("once").style.cursor = "pointer";
   }
 
   if (
@@ -168,6 +194,8 @@ async function cogerCarta() {
 
     document.querySelector("#coger").disabled = true;
     document.querySelector("#plant").disabled = true;
+    document.querySelector("#coger").style.cursor = "default";
+    document.querySelector("#plant").style.cursor = "default";
   }
 
   if (puntajeMaquina > 21) {
@@ -198,7 +226,7 @@ function ace(num) {
   mazo[aleatorio].valor = num;
   console.log(mazo[aleatorio].valor + "valor despues");
   console.log(num + " eleccion");
-  document.querySelector("#uno").disabled = true;
+  // document.querySelector("#uno").disabled = true;
   document.querySelector("#once").disabled = true;
   if (num == 11) {
     puntajeUsuario = puntajeUsuario + 10;
@@ -250,6 +278,8 @@ async function victoriaDerrota(vic) {
           "derrota",
           parseInt(window.localStorage.getItem("derrota")) + 1
         );
+        document.querySelector("#cpu").innerHTML =
+          await window.localStorage.getItem("derrota");
       }
     } catch (e) {
       console.log("Error!", e);
@@ -264,6 +294,8 @@ async function victoriaDerrota(vic) {
           "victoria",
           parseInt(window.localStorage.getItem("victoria")) + 1
         );
+        document.querySelector("#user").innerHTML =
+          await window.localStorage.getItem("victoria");
       }
     } catch (e) {
       console.log("Error!", e);
