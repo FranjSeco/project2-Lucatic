@@ -130,133 +130,153 @@ const seleccion = () => {
   let finalElection = usuarioEleccion;
   document.querySelector('#divMaquina').style = seleccionMaquina;
   document.querySelector('#divUsuario').style = finalElection;
+  let resultadoModal = document.querySelector('#resultado');
   if ((finalElection == stylesTijera) && (seleccionMaquina == stylesPapel)) {
     usuarioPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
     document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
+    resultadoModal.innerHTML = `Las tijeras ganan al papel`
   } else if ((finalElection == stylesPapel) && (seleccionMaquina == stylesPiedra)) {
     usuarioPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
     document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
+    resultadoModal.innerHTML = `El papel gana a la piedra`
   } else if ((finalElection == stylesTijera) && (seleccionMaquina == stylesLagarto)) {
     usuarioPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
-
     document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
+    resultadoModal = `Las tijeras ganan al lagarto`
   } else if ((finalElection == stylesPiedra) && (seleccionMaquina == stylesLagarto)) {
     usuarioPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
     document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
+    resultadoModal.innerHTML = `La piedra gana al lagarto`
   } else if ((finalElection == stylesLagarto) && (seleccionMaquina == stylesSpock)) {
     usuarioPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
     document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
+    resultadoModal.innerHTML = `El lagarto gana a spock`
   } else if ((finalElection == stylesSpock) && (seleccionMaquina == stylesTijera)) {
     usuarioPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
     document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
+    resultadoModal.innerHTML.innerHTML = `Spock gana a las tijeras`
   } else if ((finalElection == stylesLagarto) && (seleccionMaquina == stylesPapel)) {
     usuarioPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
     document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
+    resultadoModal.innerHTML = `El lagarto gana al papel`
   } else if ((finalElection == stylesPapel) && (seleccionMaquina == stylesSpock)) {
     usuarioPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
     document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
+    resultadoModal.innerHTML = `El papel gana a spock`
   } else if ((finalElection == stylesSpock) && (seleccionMaquina == stylesPiedra)) {
     usuarioPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
     document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
+    resultadoModal.innerHTML = `Spock gana a la piedra`
   } else if ((finalElection == stylesPiedra) && (seleccionMaquina == stylesTijera)) {
     usuarioPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#4BD338';
     document.querySelector('#divMaquina').style.backgroundColor = '#D33838';
+    resultadoModal.innerHTML = `La piedra gana a las tijeras`
   } else if ((finalElection == stylesPapel) && (seleccionMaquina == stylesTijera)) {
     maquinaPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
     document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
+    resultadoModal.innerHTML = `Las tijeras ganan al papel`
   } else if ((finalElection == stylesPiedra) && (seleccionMaquina == stylesPapel)) {
     maquinaPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
     document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
+    resultadoModal.innerHTML = `EL papel gana a la piedra`
   } else if ((finalElection == stylesLagarto) && (seleccionMaquina == stylesPiedra)) {
     maquinaPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
     document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
+    resultadoModal.innerHTML = `La piedra gana al lagarto`
   } else if ((finalElection == stylesLagarto) && (seleccionMaquina == stylesTijera)) {
     maquinaPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
     document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
+    resultadoModal.innerHTML = `Las tijeras ganan al lagarto`
   } else if ((finalElection == stylesSpock) && (seleccionMaquina == stylesLagarto)) {
     maquinaPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
     document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
+    resultadoModal.innerHTML = `El lagarto gana a spock`
   } else if ((finalElection == stylesTijera) && (seleccionMaquina == stylesSpock)) {
     maquinaPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
     document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
+    resultadoModal.innerHTML = `Spock gana a las tijeras`
   } else if ((finalElection == stylesPapel) && (seleccionMaquina == stylesLagarto)) {
     maquinaPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
     document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
+    resultadoModal.innerHTML = `El lagarto gana al papel`
   } else if ((finalElection == stylesSpock) && (seleccionMaquina == stylesPapel)) {
     maquinaPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
     document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
+    resultadoModal.innerHTML = `El papel gana a spock`
   } else if ((finalElection == stylesPiedra) && (seleccionMaquina == stylesSpock)) {
     maquinaPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
     document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
+    resultadoModal.innerHTML = `Spock gana a la piedra`
   } else if ((finalElection == stylesTijera) && (seleccionMaquina == stylesPiedra)) {
     maquinaPuntuacion++;
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#D33838';
     document.querySelector('#divMaquina').style.backgroundColor = '#4BD338';
+    resultadoModal.innerHTML = `La piedra gana a las tijeras`
   } else if (finalElection == seleccionMaquina) {
     document.querySelector('#user').innerHTML = usuarioPuntuacion;
     document.querySelector('#cpu').innerHTML = maquinaPuntuacion;
     document.querySelector('#divUsuario').style.backgroundColor = '#D3D338';
     document.querySelector('#divMaquina').style.backgroundColor = '#D3D338';
-    console.log('empate')
+    resultadoModal.innerHTML = `Empate`;
   }
 }
 // ADDEVENTLISTENERS
