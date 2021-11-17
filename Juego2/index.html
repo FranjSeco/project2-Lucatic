@@ -4,15 +4,94 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css" />
     <title>Blackjack</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.10.2/css/all.css"
+    />
   </head>
   <body>
-    <div id="img"></div>
-    <br>
-    <div id="usuario"></div>
-    <button onclick="cogerCarta()" id="coger">Coger Carta</button>
-    <button onclick="plantarse()" id="plant">Plantarse</button>
+    <div id="game">
+      <div class="bottom">
+        <img
+          onclick="location.href='../juego1/juego1.html';"
+          src="../images2/Piedra.PNG"
+          alt=""
+        />
+        <i onclick="location.href='#';" class="fas fa-money-bill-alt fa-2x"></i>
+      </div>
+      <div class="bottom">
+        <p id="cpu">0</p>
+        <p>|</p>
+        <p id="user">0</p>
+      </div>
+      <div class="bottom">
+        <i id="myBtn" class="fas fa-info-circle fa-2x"></i>
+
+        <i id="cog" class="fas fa-cog fa-2x"></i>
+      </div>
+    </div>
+    <div class="contenedor">
+      <div class="flex">
+        <div id="img"></div>
+
+        <div id="usuario"></div>
+      </div>
+
+      <div class="botones">
+        <div class="cosas">
+          <button onclick="cogerCarta()" id="coger">Coger</button>
+          <button onclick="plantarse()" id="plant">Plantarse</button>
+
+          <!-- <button onclick="ace(1)" id="uno" disabled>Ace 1</button> -->
+          <button onclick="ace(11)" id="once" disabled>Ace 11</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trigger/Open The Modal -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close"></span>
+
+        <h1>The Objective of Blackjack</h1>
+        <br />
+        <strong>Beat The Dealer.</strong> There are some misconceptions about
+        the objective of the game of blackjack but at the simplest level all you
+        are trying to do is beat the dealer. <br />
+        <br />
+        <br />
+        <strong>How do you beat the dealer?</strong> <br /><br />
+        <ol>
+          <li>
+            By drawing a hand value that is higher than the dealer’s hand value
+          </li>
+          <br />
+          <li>By the dealer drawing a hand value that goes over 21.</li>
+          <br />
+          <li>
+            By drawing a hand value of 21 on your first two cards, when the
+            dealer does not.
+          </li>
+        </ol>
+        <br />
+        <br />
+        <strong>How do you lose to the dealer?</strong> <br /><br />
+        <ol>
+          <li>Your hand value exceeds 21.</li>
+          <br />
+          <li>
+            The dealers hand has a greater value than yours at the end of the
+            round
+          </li>
+        </ol>
+      </div>
+    </div>
+
     <script src="Script.js"></script>
   </body>
 </html>

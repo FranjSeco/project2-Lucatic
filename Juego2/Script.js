@@ -8,6 +8,10 @@ class Carta {
   }
 }
 
+// document.querySelector("#uno").disabled = true;
+document.querySelector("#once").disabled = true;
+document.querySelector("#coger").style.cursor = "pointer";
+document.querySelector("#plant").style.cursor = "pointer";
 
 let mazo = [];
 let palos = ["Corazones", "Treboles", "Diamantes", "Picas"];
@@ -20,82 +24,105 @@ let contador = 0;
 var turno = "jugador";
 let aleatorio;
 
+let modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+let btn = document.getElementById("myBtn");
+
+let contenedor = document.querySelector(".contenedor");
+
+// When the user clicks on the button, open the modal
+btn.onclick = function () {
+  modal.style.display = "flex";
+  modal.style.transitionDelay = "2s";
+  modal.style.alignContent = "center";
+};
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    btn.style.display = "inline";
+    modal.style.display = "none";
+  }
+};
 
 ///SE GENERA EL MAZO
- function generarMazo(){
-for (let j = 0; j < palos.length; j++) {
-  for (let i = 1; i < 13 + 1; i++) {
-    if (i == 1) {
-      mazo.push(
-        new Carta(
-          i,
-          palos[j],
-          "https://deckofcardsapi.com/static/img/A" + palosLetra[j] + ".png",
-          1,
-          "x "
-        )
-      );
-    }
-    if (i == 10) {
+
+function generarMazo() {
+  for (let j = 0; j < palos.length; j++) {
+    for (let i = 1; i < 13 + 1; i++) {
+      if (i == 1) {
         mazo.push(
-        new Carta(
-          i,
-          palos[j],
-          "https://deckofcardsapi.com/static/img/0" + palosLetra[j] + ".png",
-          i,
-          "x "
-        )
-      );
-    }
-    if (i == 11) {
-       mazo.push(
-        new Carta(
-          i,
-          palos[j],
-          "https://deckofcardsapi.com/static/img/J" + palosLetra[j] + ".png",
-          10,
-          "x "
-        )
-      );
-    }
-    if (i == 12) {
+          new Carta(
+            i,
+            palos[j],
+            "https://deckofcardsapi.com/static/img/A" + palosLetra[j] + ".png",
+            1,
+            "x "
+          )
+        );
+      }
+      if (i == 10) {
         mazo.push(
-        new Carta(
-          i,
-          palos[j],
-          "https://deckofcardsapi.com/static/img/Q" + palosLetra[j] + ".png",
-          10,
-          "x "
-        )
-      );
-    }
-    if (i == 13) {
-       mazo.push(
-        new Carta(
-          i,
-          palos[j],
-          "https://deckofcardsapi.com/static/img/K" + palosLetra[j] + ".png",
-          10,
-          "x "
-        )
-      );
-    }
-    if ((i != 1) & (i != 10) & (i != 11) & (i != 12) & (i != 13)) {
-       mazo.push(
-        new Carta(
-          i,
-          palos[j],
-          "https://deckofcardsapi.com/static/img/" + i + palosLetra[j] + ".png",
-          i,
-          "x "
-        )
-      );
+          new Carta(
+            i,
+            palos[j],
+            "https://deckofcardsapi.com/static/img/0" + palosLetra[j] + ".png",
+            i,
+            "x "
+          )
+        );
+      }
+      if (i == 11) {
+        mazo.push(
+          new Carta(
+            i,
+            palos[j],
+            "https://deckofcardsapi.com/static/img/J" + palosLetra[j] + ".png",
+            10,
+            "x "
+          )
+        );
+      }
+      if (i == 12) {
+        mazo.push(
+          new Carta(
+            i,
+            palos[j],
+            "https://deckofcardsapi.com/static/img/Q" + palosLetra[j] + ".png",
+            10,
+            "x "
+          )
+        );
+      }
+      if (i == 13) {
+        mazo.push(
+          new Carta(
+            i,
+            palos[j],
+            "https://deckofcardsapi.com/static/img/K" + palosLetra[j] + ".png",
+            10,
+            "x "
+          )
+        );
+      }
+      if ((i != 1) & (i != 10) & (i != 11) & (i != 12) & (i != 13)) {
+        mazo.push(
+          new Carta(
+            i,
+            palos[j],
+            "https://deckofcardsapi.com/static/img/" +
+              i +
+              palosLetra[j] +
+              ".png",
+            i,
+            "x "
+          )
+        );
+      }
     }
   }
 }
-
-}
-
 
 generarMazo();
 
@@ -104,21 +131,18 @@ for (let i = 0; i < 4; i++) {
   cogerCarta();
 }
 
-
-
 //COGER CARTAS
 function cogerCarta() {
   aleatorio = parseInt(Math.random() * (numCartas - 1) + 0);
 
   while (mano.includes(mazo[aleatorio]) == true) {
     aleatorio = parseInt(Math.random() * (numCartas - 1) + 0);
-  }  
-   console.log(mazo[aleatorio].propietario+"Hola");
+  }
+  console.log(mazo[aleatorio].propietario + "Hola");
   // añade dueño a la carta pillada
   if (contador < 2 || turno == "maquina") {
     mazo[aleatorio].propietario = "maquina";
   } else {
- 
     mazo[aleatorio].propietario = "jugador";
   }
 
@@ -126,20 +150,10 @@ function cogerCarta() {
     (aleatorio == 0 || aleatorio == 13 || aleatorio == 26 || aleatorio == 39) &&
     mazo[aleatorio].propietario == "jugador"
   ) {
-    if(document.getElementById("uno")==null){
-      console.log("error");
-    }
-else{
-  document.getElementById("uno").disabled = false;
-}
-if(   document.getElementById("once")==null){
-  console.log("error");
-}
-else{
-  document.getElementById("once").disabled = false;
-}
-   
- 
+    // document.getElementById("uno").disabled = false;
+    document.getElementById("once").disabled = false;
+    // document.getElementById("uno").style.cursor = "pointer";
+    document.getElementById("once").style.cursor = "pointer";
   }
 
   if (
@@ -153,9 +167,7 @@ else{
   mano.push(mazo[aleatorio]);
   console.log(mano);
 
-
-  
-//se asigna propietario a la carta
+  //se asigna propietario a la carta
   if (mano[contador].propietario == "jugador") {
     puntajeUsuario += mano[contador].valor;
     console.log(puntajeUsuario + " hola");
@@ -164,31 +176,24 @@ else{
     console.log(puntajeMaquina + " hola Maquina");
   }
 
-
   // imprime imagen en pantalla
-   if (contador > 0) {
-    if(mazo[aleatorio].propietario=="jugador"){
-      if( document.getElementById("usuario")==null){
-console.log("ERROR");
-      }
-      else{
-        document.getElementById("usuario").innerHTML +=
+
+  if (mazo[aleatorio].propietario == "jugador") {
+    if (document.getElementById("usuario") == null) {
+      console.log("ERROR");
+    } else {
+      document.getElementById("usuario").innerHTML +=
         "<img src=" + mazo[aleatorio].imagen + ">";
-      }
-     
     }
-    if(mazo[aleatorio].propietario=="maquina"){
-if(document.getElementById("img")==null){
-  console.log("ERROR");
-}else{
-  document.getElementById("img").innerHTML +=
-  "<img src=" + mazo[aleatorio].imagen + ">";
-}
- 
-    }
-
   }
-
+  if (mazo[aleatorio].propietario == "maquina") {
+    if (document.getElementById("img") == null) {
+      console.log("ERROR");
+    } else {
+      document.getElementById("img").innerHTML +=
+        "<img src=" + mazo[aleatorio].imagen + ">";
+    }
+  }
 
   if (puntajeUsuario > 21) {
     alert(
@@ -202,22 +207,11 @@ if(document.getElementById("img")==null){
 
     // Output the final value.
 
-    if( document.querySelector("#coger")==null){
-      console.log("ERROR");
-     }
-      else{
-     
-       document.querySelector("#coger").disabled = true;
-      }
-      if( document.querySelector("#plant")==null){
-       console.log("ERROR");
-      }
-       else{
-      
-         document.querySelector("#plant").disabled = true;
-       }
-
-     }
+    document.querySelector("#coger").disabled = true;
+    document.querySelector("#plant").disabled = true;
+    document.querySelector("#coger").style.cursor = "default";
+    document.querySelector("#plant").style.cursor = "default";
+  }
 
   if (puntajeMaquina > 21) {
     alert(
@@ -227,20 +221,16 @@ if(document.getElementById("img")==null){
         puntajeUsuario
     );
 
-    if( document.querySelector("#coger")==null){
+    if (document.querySelector("#coger") == null) {
       console.log("ERROR");
-     }
-      else{
-     
-       document.querySelector("#coger").disabled = true;
-      }
-      if( document.querySelector("#plant")==null){
-       console.log("ERROR");
-      }
-       else{
-      
-         document.querySelector("#plant").disabled = true;
-       }
+    } else {
+      document.querySelector("#coger").disabled = true;
+    }
+    if (document.querySelector("#plant") == null) {
+      console.log("ERROR");
+    } else {
+      document.querySelector("#plant").disabled = true;
+    }
   }
 
   contador++;
@@ -260,22 +250,16 @@ function ace(num) {
   console.log(mazo[aleatorio].valor + "valor despues");
   console.log(num + " eleccion");
 
-  if( document.querySelector("#uno")==null){
+  if (document.querySelector("#uno") == null) {
     console.log("ERROR");
-   }
-    else{
-   
-     document.querySelector("#uno").disabled = true;
-    }
-    if( document.querySelector("#once")==null){
-     console.log("ERROR");
-    }
-     else{
-    
-       document.querySelector("#once").disabled = true;
-     }
-
-
+  } else {
+    document.querySelector("#uno").disabled = true;
+  }
+  if (document.querySelector("#once") == null) {
+    console.log("ERROR");
+  } else {
+    document.querySelector("#once").disabled = true;
+  }
 
   if (num == 11) {
     puntajeUsuario = puntajeUsuario + 10;
@@ -292,22 +276,16 @@ function ace(num) {
 
 function plantarse() {
   turno = "maquina";
-if( document.querySelector("#coger")==null){
- console.log("ERROR");
-}
- else{
-
-  document.querySelector("#coger").disabled = true;
- }
- if( document.querySelector("#plant")==null){
-  console.log("ERROR");
- }
-  else{
- 
+  if (document.querySelector("#coger") == null) {
+    console.log("ERROR");
+  } else {
+    document.querySelector("#coger").disabled = true;
+  }
+  if (document.querySelector("#plant") == null) {
+    console.log("ERROR");
+  } else {
     document.querySelector("#plant").disabled = true;
   }
-
-
 
   while (puntajeMaquina < puntajeUsuario && puntajeUsuario < 22) {
     cogerCarta();
@@ -324,15 +302,13 @@ if( document.querySelector("#coger")==null){
   }
 
   if (puntajeUsuario == 21 && puntajeMaquina == 21) {
+    ///////////////////////////////////
   }
 }
-
-
 
 //////////////////   VICTORIADERROTA
 
 async function victoriaDerrota(vic) {
-  
   if (vic == "usuPerd") {
     try {
       if ((await window.localStorage.getItem("derrota")) == undefined) {
@@ -342,11 +318,12 @@ async function victoriaDerrota(vic) {
           "derrota",
           parseInt(window.localStorage.getItem("derrota")) + 1
         );
+        document.querySelector("#cpu").innerHTML =
+          await window.localStorage.getItem("derrota");
       }
     } catch (e) {
       console.log("Error!", e);
     }
-   
   }
   if (vic == "usuGan") {
     try {
@@ -357,18 +334,18 @@ async function victoriaDerrota(vic) {
           "victoria",
           parseInt(window.localStorage.getItem("victoria")) + 1
         );
+        document.querySelector("#user").innerHTML =
+          await window.localStorage.getItem("victoria");
       }
     } catch (e) {
       console.log("Error!", e);
     }
-    
   }
 
   if (vic == "empate") {
     try {
       if ((await window.localStorage.getItem("empate")) == undefined) {
         await window.localStorage.setItem("empate", 1);
-      
       } else {
         await window.localStorage.setItem(
           "empate",
@@ -378,14 +355,20 @@ async function victoriaDerrota(vic) {
     } catch (e) {
       console.log("Error!", e);
     }
-   
   }
 
   console.log(window.localStorage.getItem("derrota") + "derrota");
   console.log(window.localStorage.getItem("victoria") + "victoria");
 }
 
-
-module.exports = { contador, Carta, plantarse, ace, cogerCarta,mazo,generarMazo,puntajeMaquina,puntajeUsuario};
-
-
+module.exports = {
+  contador,
+  Carta,
+  plantarse,
+  ace,
+  cogerCarta,
+  mazo,
+  generarMazo,
+  puntajeMaquina,
+  puntajeUsuario,
+};
