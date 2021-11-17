@@ -27,86 +27,88 @@
 </head>
 
 <body>
-  <div id="game">
-    <div class="bottom">
-      <img onclick="location.href='../juego1/juego1.html';" src="../images2/Piedra.PNG" alt="" />
-      <i onclick="location.href='#';" class="fas fa-money-bill-alt fa-2x"></i>
-    </div>
-    <div class="bottom">
-      <i id="bot" class="fas fa-robot fa-2x"></i>
-      <p id="cpu">0</p>
-      <p>|</p>
-      <p id="user">0</p>
-      <i id="pers" class="fas fa-user-tie fa-2x"></i>
-    </div>
-    <div class="bottom">
-      <i id="myBtn" class="fas fa-info-circle fa-2x"></i>
-
-      <i onclick="location.href='../index.html';" id="cog" class="fas fa-home fa-2x"></i>
-    </div>
-  </div>
-
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-    <!-- Modal content -->
-    <div class="modal-content">
-      <!-- VIDEO -->
-      <video class="juego__video" width="400" controls>
-        <source src="../video/video1.mp4" type="video/mp4">
-        Your browser does not support HTML video.
-      </video>
-      <!-- REGLAS -->
-      <div class="juego__image-wrapper">
-        <img src="../images2/MicrosoftTeams-image.png" alt="Reglas juego">
+  <div class="overlay">
+    <div id="game">
+      <div class="bottom">
+        <img onclick="location.href='../juego1/juego1.html';" src="../images2/Piedra.PNG" alt="" />
+        <i onclick="location.href='#';" class="fas fa-money-bill-alt fa-2x"></i>
       </div>
+      <div class="bottom">
+        <i id="bot" class="fas fa-robot fa-2x"></i>
+        <p id="cpu">0</p>
+        <p>|</p>
+        <p id="user">0</p>
+        <i id="pers" class="fas fa-user-tie fa-2x"></i>
+      </div>
+      <div class="bottom">
+        <i id="myBtn" class="fas fa-info-circle fa-2x"></i>
 
+        <i onclick="location.href='../index.html';" id="cog" class="fas fa-home fa-2x"></i>
+      </div>
     </div>
-  </div>
 
-  <section>
-    <div class="juego__wrapper">
-      <!-- JUEGO -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <!-- VIDEO -->
+        <video class="juego__video" width="400" controls>
+          <source src="../video/video1.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <!-- REGLAS -->
+        <div class="juego__image-wrapper">
+          <img src="../images2/MicrosoftTeams-image.png" alt="Reglas juego">
+        </div>
 
-      <!-- START -->
-      <div class="juego__fun-wrapper">
+      </div>
+    </div>
 
-        <div class="juego__tablero-wrapper">
-          <div class="juego__tablero">
-            <div class="juego__eleccion-usuario">
-              <h3 class="juego__tablero-titulo">Usuario</h3>
-              <div class="juego__usuario" id="divUsuario">
+    <section>
+      <div class="juego__wrapper">
+        <!-- JUEGO -->
 
+        <!-- START -->
+        <div class="juego__fun-wrapper">
+
+          <div class="juego__tablero-wrapper">
+            <div class="juego__tablero">
+              <div id="resultado" class="juego__resultado"></div>
+              <div class="juego__eleccion-usuario">
+                <h3 class="juego__tablero-titulo">Usuario</h3>
+                <div class="juego__usuario" id="divUsuario">
+
+                </div>
               </div>
-            </div>
-            <div class="juego__eleccion-usuario">
-              <h3 class="juego__tablero-titulo">Maquina</h3>
-              <div class="juego__maquina" id="divMaquina">
+              <div class="juego__eleccion-usuario">
+                <h3 class="juego__tablero-titulo">Maquina</h3>
+                <div class="juego__maquina" id="divMaquina">
 
+                </div>
               </div>
-            </div>
 
-          </div>
-          <div class="juego__opciones">
-            <div class="juego__opcio-img">
-              <img class="juego__imagenes" id="lagarto" src="../images2/Lagarto.PNG" alt="">
-              <img class="juego__imagenes" id="papel" src="../images2/Papel.PNG" alt="">
-              <img class="juego__imagenes" id="piedra" src="../images2/Piedra.PNG" alt="">
-              <img class="juego__imagenes" id="spock" src="../images2/Spock.PNG" alt="">
-              <img class="juego__imagenes" id="tijera" src="../images2/Tijera.PNG" alt="">
             </div>
-            <div class="juegos__seleccion-botones">
-              <button class="juego__seleccionar boton" id="seleccion">Jugar</button>
-              <button class="juego__seleccionar-limpiar boton" id="limpiar">Limpiar seleccion</button>
-            </div>
+            <div class="juego__opciones">
+              <div class="juego__opcio-img">
+                <img class="juego__imagenes" id="lagarto" src="../images2/Lagarto.PNG" alt="">
+                <img class="juego__imagenes" id="papel" src="../images2/Papel.PNG" alt="">
+                <img class="juego__imagenes" id="piedra" src="../images2/Piedra.PNG" alt="">
+                <img class="juego__imagenes" id="spock" src="../images2/Spock.PNG" alt="">
+                <img class="juego__imagenes" id="tijera" src="../images2/Tijera.PNG" alt="">
+              </div>
+              <div class="juegos__seleccion-botones">
+                <button class="juego__seleccionar boton" id="seleccion">Jugar</button>
+                <button class="juego__seleccionar-limpiar boton" id="limpiar">Limpiar seleccion</button>
+              </div>
 
+            </div>
           </div>
         </div>
+        <button class="juego__start boton" id="start">Start / Resetear</button>
       </div>
-      <button class="juego__start boton" id="start">Start / Resetear</button>
-    </div>
-  </section>
+    </section>
 
-
+  </div>
   <script language="javascript" type="module" src="juego1.js"></script>
 
 </body>

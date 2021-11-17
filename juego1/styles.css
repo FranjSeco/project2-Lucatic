@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
+  position: relative;
 }
 
 section {
@@ -14,6 +15,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .title-juego {
@@ -74,6 +82,8 @@ section {
 .juego__tablero-titulo {
   color: #fff;
   padding: 10px;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .juego__tablero {
@@ -83,10 +93,26 @@ section {
   width: 100%;
   height: 400px;
   background-color: transparent;
+  position: relative;
+}
+
+.juego__resultado {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  background-color: transparent;
+  text-align: center;
+  color: var(--main-blanco);
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+  width: 200px;
+  height: 150px;
+  transform: translateX(-50%);
 }
 
 .juego__usuario {
-  width: 70%;
+  width: 60%;
   height: 100%;
   background-color: transparent;
   text-align: center;
@@ -99,7 +125,7 @@ section {
 }
 
 .juego__maquina {
-  width: 70%;
+  width: 60%;
   height: 100%;
   background-color: transparent;
   text-align: center;
