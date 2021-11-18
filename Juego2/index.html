@@ -29,7 +29,11 @@
         <i id="pers" class="fas fa-user-tie fa-2x"></i>
       </div>
       <div class="bottom">
-        <i id="myBtn" onclick="information()" class="fas fa-info-circle fa-2x"></i>
+        <i
+          id="myBtn"
+          onclick="information()"
+          class="fas fa-info-circle fa-2x"
+        ></i>
 
         <i
           onclick="location.href='../index.html';"
@@ -47,23 +51,20 @@
 
       <div class="botones">
         <div class="cosas">
-          <button onclick="cogerCarta()" id="coger">Coger</button>
+          <button onclick="cogerCarta()" id="coger">Robar</button>
           <button onclick="plantarse()" id="plant">Plantarse</button>
 
           <!-- <button onclick="ace(1)" id="uno" disabled>Ace 1</button> -->
+
           <button onclick="ace(11)" id="once" disabled>Ace 11</button>
         </div>
       </div>
     </div>
 
-    <!-- Trigger/Open The Modal -->
-
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close"></span>
-
+      <div class="modal-content" id="modal1">
         <h1>The Objective of Blackjack</h1>
         <br />
         <strong>Beat The Dealer.</strong> There are some misconceptions about
@@ -95,6 +96,15 @@
             round
           </li>
         </ol>
+      </div>
+    </div>
+    <div class="modal" id="ventanaApuesta">
+      <div class="modal-content" id="modal2">
+        <h2>Dinero para esta partida:</h2>
+        <form id="form1" onsubmit="apostar()">
+          <input type="number" id="dinerito" pattern="[0-9]+" required />
+          <input type="submit" id="apost" value="Apostar" />
+        </form>
       </div>
     </div>
 
