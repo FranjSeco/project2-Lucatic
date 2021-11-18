@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +8,12 @@ body {
   background: url(https://wallpapersmug.com/large/904c66/abstract-minimal-vertical-and-horizontal-stripes.jpg);
   background-size: cover;
 
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .contenedor {
   display: flex;
-  justify-content: space-evenly;
+
   align-items: center;
   height: 100vh;
 }
@@ -23,6 +23,8 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
+  margin-left: auto;
+  margin-right: 20%;
 }
 
 .botones button {
@@ -31,7 +33,6 @@ body {
   color: white;
   font-size: large;
   width: 175px;
-
   border: none;
 }
 
@@ -54,10 +55,38 @@ body {
   margin-top: 30px;
 }
 
+#coger:hover,
+#plant:hover {
+  background: #410101;
+
+  transition: 0.3s;
+}
+
+#alertBox {
+  position: absolute;
+  top: 100px;
+  margin-left: auto;
+  border: solid 1px black;
+  background-color: #528ce0;
+  padding: 50px;
+  visibility: hidden;
+}
+#alertClose {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: black;
+  border: solid 1px white;
+  color: white;
+  width: 1em;
+  text-align: center;
+  cursor: pointer;
+}
+
 .flex {
   display: flex;
   flex-direction: column;
-
+  margin-left: auto;
   text-align: center;
 }
 
@@ -117,8 +146,8 @@ body {
 #game .bottom p {
   font-size: xx-large;
   font-weight: bolder;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 #game .bottom p:first-child {
@@ -216,4 +245,37 @@ body {
 .modal-content ol li {
   margin: 0px;
   padding: 0px;
+}
+
+#modal2 {
+  width: 30%;
+}
+
+#dinerito {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  border: 0px;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+#dinerito:focus {
+  outline: none;
+}
+
+#apost {
+  float: right;
+  padding: 15px 20px;
+  border-radius: 0px;
+  border: none;
+  font-size: 20px;
+}
+#apost:hover {
+  background: #c55e5e;
+  transition: 0.25s;
+  color: white;
 }
