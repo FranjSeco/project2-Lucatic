@@ -234,7 +234,7 @@ body {
   border: 1px solid #888;
   width: 40%; /* Could be more or less, depending on screen size */
   height: fit-content;
-  text-align: left;
+  text-align: left !important;
   font-size: large;
 }
 

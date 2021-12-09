@@ -66,10 +66,7 @@
       <!-- Modal content -->
       <div class="modal-content" id="modal1">
         <h1>The Objective of Blackjack</h1>
-        <br />
-        <strong>Beat The Dealer.</strong> There are some misconceptions about
-        the objective of the game of blackjack but at the simplest level all you
-        are trying to do is beat the dealer. <br />
+
         <br />
         <br />
         <strong>How do you beat the dealer?</strong> <br /><br />
@@ -96,6 +93,21 @@
             round
           </li>
         </ol>
+        <br /><br />
+        <h2 style="color: #c51212">ACE 11</h2>
+        <br />
+        <strong>On activation</strong> , Ace 11 allows you to select whether you
+        want your cards value to be 1 or 11, 1 if ignored and 11 if pressed
+        <br />
+      </div>
+    </div>
+    <div class="modal" id="ventanaApuesta">
+      <div class="modal-content" id="modal2">
+        <h2>Dinero para esta partida:</h2>
+        <form id="form1" onsubmit="apostar()">
+          <input type="number" id="dinerito" pattern="[0-9]+" required />
+          <input type="submit" id="apost" value="Apostar" />
+        </form>
       </div>
     </div>
     <div class="modal" id="ventanaApuesta">
