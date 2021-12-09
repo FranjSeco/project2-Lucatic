@@ -234,7 +234,7 @@ body {
   border: 1px solid #888;
   width: 40%; /* Could be more or less, depending on screen size */
   height: fit-content;
-  text-align: left;
+  text-align: left !important;
   font-size: large;
 }
 
@@ -245,4 +245,37 @@ body {
 .modal-content ol li {
   margin: 0px;
   padding: 0px;
+}
+
+#modal2 {
+  width: 30%;
+}
+
+#dinerito {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  border: 0px;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+#dinerito:focus {
+  outline: none;
+}
+
+#apost {
+  float: right;
+  padding: 15px 20px;
+  border-radius: 0px;
+  border: none;
+  font-size: 20px;
+}
+#apost:hover {
+  background: #c55e5e;
+  transition: 0.25s;
+  color: white;
 }
